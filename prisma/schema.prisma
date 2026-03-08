@@ -47,6 +47,7 @@ model Booking {
   id                   String         @id @default(cuid())
   publicId             String         @unique
   customerToken        String
+  contactEmail         String?
   pickupText           String
   dropoffText          String
   requestedWindowStart DateTime

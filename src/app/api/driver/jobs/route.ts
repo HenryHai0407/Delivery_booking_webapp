@@ -1,12 +1,10 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
-import { assertRole } from "@/lib/auth";
+import { requireRole } from "@/lib/auth";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
-    assertRole(req.headers, "driver");
-    const driverId = req.headers.get("x-user-id");
-    if (!driverId) throw new Error("Missing x-user-id");
+    const { userId: driverId } = await requireRole("driver");
 
     const today = new Date();
     const start = new Date(today.getFullYear(), today.getMonth(), today.getDate());

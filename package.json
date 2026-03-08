@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "node --test tests/*.test.mjs",
+    "check:env": "node scripts/validate-env.mjs",
+    "deploy:check": "npm run check:env && npm run prisma:deploy && npm run build",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:deploy": "prisma migrate deploy"
@@ -15,18 +17,18 @@
   "dependencies": {
     "@auth/prisma-adapter": "^2.7.4",
     "@prisma/client": "^5.22.0",
-    "next": "14.2.26",
+    "next": "^15.5.12",
     "next-auth": "^5.0.0-beta.25",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "zod": "^3.24.2"
   },
   "devDependencies": {
     "@types/node": "^20.17.24",
-    "@types/react": "^18.3.20",
-    "@types/react-dom": "^18.3.6",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "eslint": "^8.57.1",
-    "eslint-config-next": "14.2.26",
+    "eslint-config-next": "^15.5.12",
     "prisma": "^5.22.0",
     "typescript": "^5.8.2"
   }

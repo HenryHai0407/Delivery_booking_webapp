@@ -1,8 +1,11 @@
+import { authSession } from "@/auth/auth";
 import type { Role } from "@/lib/types";
 
-export function assertRole(headers: Headers, role: Role): void {
-  const incoming = headers.get("x-role");
-  if (incoming !== role) {
+export async function requireRole(role: Role): Promise<{ userId: string; role: Role }> {
+  const session = await authSession();
+  const user = session?.user;
+  if (!user?.id || user.role !== role) {
     throw new Error("Forbidden");
   }
+  return { userId: user.id, role: user.role };
 }

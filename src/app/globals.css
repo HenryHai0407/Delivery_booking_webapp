@@ -7,3 +7,12 @@ a { color: #2563eb; text-decoration: none; }
 input, select, textarea, button { padding: 8px; border-radius: 8px; border: 1px solid #d1d5db; }
 button { background: #111827; color: #fff; cursor: pointer; }
 .small { color: #6b7280; font-size: 12px; }
+.error { color: #b91c1c; }
+.success { color: #166534; }
+.booking-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; align-items: start; }
+.route-panel { border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; background: #f8fafc; }
+.route-map { height: 320px; border: 1px solid #d1d5db; border-radius: 10px; margin-bottom: 10px; background: #eef2ff; }
+@media (max-width: 900px) {
+  .booking-layout { grid-template-columns: 1fr; }
+  .route-map { height: 260px; }
+}

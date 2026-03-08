@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
-import { assertRole } from "@/lib/auth";
+import { requireRole } from "@/lib/auth";
 
 export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
   try {
-    assertRole(req.headers, "admin");
+    const { userId: actorUserId } = await requireRole("admin");
     const body = await req.json();
     const assignment = await prisma.assignment.create({
       data: {
@@ -16,7 +16,7 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
     await prisma.bookingEvent.create({
       data: {
         bookingId: params.id,
-        actorUserId: req.headers.get("x-user-id") || undefined,
+        actorUserId,
         eventType: "assignment",
         payloadJson: JSON.stringify({ driverId: body.driverId })
       }
