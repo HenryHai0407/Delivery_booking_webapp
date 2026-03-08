@@ -1,0 +1,9 @@
+:root { font-family: Inter, system-ui, sans-serif; }
+body { margin: 0; background: #fafafa; color: #111; }
+main { max-width: 960px; margin: 0 auto; padding: 24px; }
+a { color: #2563eb; text-decoration: none; }
+.card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+.grid { display: grid; gap: 12px; }
+input, select, textarea, button { padding: 8px; border-radius: 8px; border: 1px solid #d1d5db; }
+button { background: #111827; color: #fff; cursor: pointer; }
+.small { color: #6b7280; font-size: 12px; }

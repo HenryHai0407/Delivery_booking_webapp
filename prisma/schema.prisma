@@ -1,0 +1,132 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  admin
+  driver
+}
+
+enum BookingStatus {
+  requested
+  confirmed
+  scheduled
+  assigned
+  driver_en_route
+  picked_up
+  delivered
+  completed
+  cancelled
+}
+
+enum BookingEventType {
+  status_change
+  note_added
+  assignment
+  message_sent
+  pod_uploaded
+}
+
+model User {
+  id           String       @id @default(cuid())
+  email        String       @unique
+  passwordHash String
+  role         Role
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  assignments  Assignment[]
+  events       BookingEvent[] @relation("EventActor")
+}
+
+model Booking {
+  id                   String         @id @default(cuid())
+  publicId             String         @unique
+  customerToken        String
+  pickupText           String
+  dropoffText          String
+  requestedWindowStart DateTime
+  requestedWindowEnd   DateTime
+  scheduledWindowStart DateTime?
+  scheduledWindowEnd   DateTime?
+  status               BookingStatus  @default(requested)
+  quoteAmountCents     Int?
+  finalAmountCents     Int?
+  notes                String?
+  createdAt            DateTime       @default(now())
+  updatedAt            DateTime       @updatedAt
+  items                BookingItem[]
+  assignments          Assignment[]
+  events               BookingEvent[]
+  pod                  Pod?
+
+  @@index([status, createdAt(sort: Desc)])
+  @@index([scheduledWindowStart])
+}
+
+model BookingItem {
+  id          String  @id @default(cuid())
+  bookingId   String
+  description String
+  quantity    Int     @default(1)
+  notes       String?
+  booking     Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+}
+
+model Assignment {
+  id        String   @id @default(cuid())
+  bookingId String
+  driverId  String
+  createdAt DateTime @default(now())
+  booking   Booking  @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  driver    User     @relation(fields: [driverId], references: [id], onDelete: Cascade)
+
+  @@unique([bookingId, driverId])
+  @@index([driverId, createdAt(sort: Desc)])
+}
+
+model BookingEvent {
+  id          String           @id @default(cuid())
+  bookingId   String
+  actorUserId String?
+  eventType   BookingEventType
+  payloadJson String
+  createdAt   DateTime         @default(now())
+  booking     Booking          @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  actor       User?            @relation("EventActor", fields: [actorUserId], references: [id])
+
+  @@index([bookingId, createdAt(sort: Desc)])
+}
+
+model Pod {
+  id         String     @id @default(cuid())
+  bookingId  String     @unique
+  notes      String?
+  createdAt  DateTime   @default(now())
+  booking    Booking    @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  photos     PodPhoto[]
+}
+
+model PodPhoto {
+  id          String   @id @default(cuid())
+  podId       String
+  objectKey   String
+  storageUrl  String
+  createdAt   DateTime @default(now())
+  pod         Pod      @relation(fields: [podId], references: [id], onDelete: Cascade)
+
+  @@index([podId, createdAt(sort: Desc)])
+}
+
+model IdempotencyKey {
+  key          String   @id
+  scope        String
+  responseJson String?
+  createdAt    DateTime @default(now())
+
+  @@index([scope, createdAt(sort: Desc)])
+}
