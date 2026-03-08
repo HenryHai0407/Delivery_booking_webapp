@@ -7,20 +7,30 @@ import { withIdempotency } from "@/lib/idempotency";
 import { correlationId } from "@/lib/logging";
 import { notifyBooking } from "@/lib/notifications";
 
-export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const cid = correlationId(req.headers);
   try {
+    const { id } = await params;
     const { userId: actorUserId } = await requireRole("admin");
     const body = updateStatusSchema.parse(await req.json());
 
-    const result = await withIdempotency(body.idempotencyKey, `admin_status_${params.id}`, async () => {
-      const booking = await prisma.booking.findUniqueOrThrow({ where: { id: params.id } });
+    const result = await withIdempotency(body.idempotencyKey, `admin_status_${id}`, async () => {
+      const booking = await prisma.booking.findUniqueOrThrow({ where: { id } });
       assertTransition(booking.status as never, body.status as never);
+      if (body.status === "completed") {
+        const pod = await prisma.pod.findUnique({
+          where: { bookingId: id },
+          select: { id: true, photos: { select: { id: true }, take: 1 } }
+        });
+        if (!pod || pod.photos.length === 0) {
+          throw new Error("POD photo is required before marking booking as completed.");
+        }
+      }
 
-      const updated = await prisma.booking.update({ where: { id: params.id }, data: { status: body.status } });
+      const updated = await prisma.booking.update({ where: { id }, data: { status: body.status } });
       await prisma.bookingEvent.create({
         data: {
-          bookingId: params.id,
+          bookingId: id,
           actorUserId,
           eventType: "status_change",
           payloadJson: JSON.stringify({ from: booking.status, to: body.status, note: body.note })

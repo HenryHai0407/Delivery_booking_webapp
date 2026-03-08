@@ -5,10 +5,24 @@ import { useEffect, useMemo, useRef, useState } from "react";
 type RoutePreviewProps = {
   pickupText: string;
   dropoffText: string;
+  staffRequired: number;
   onSuggestedWindowMinutes?: (minutes: number | null) => void;
+  onEstimateChange?: (estimate: RouteEstimate | null) => void;
 };
 
 type Point = { lat: number; lon: number };
+export type RouteEstimate = {
+  lowEur: number;
+  highEur: number;
+  billedHours: number;
+  provider: "google" | "osm";
+  distanceKm: number;
+  etaMinutes: number;
+  trafficEtaMinutes: number | null;
+  trafficLevel: "free" | "moderate" | "busy" | "heavy" | "unknown";
+  updatedAt: string;
+};
+
 type RouteResult = {
   distanceMeters: number;
   durationSeconds: number;
@@ -132,7 +146,9 @@ async function findRoute(pickup: Point, dropoff: Point): Promise<RouteResult | n
   return {
     distanceMeters: route.distance,
     durationSeconds: route.duration,
-    coords: route.geometry.coordinates
+    coords: route.geometry.coordinates,
+    provider: "osm",
+    updatedAt: new Date().toISOString()
   };
 }
 
@@ -215,17 +231,27 @@ function roundToHalfHour(hours: number) {
   return Math.max(1, Math.ceil(hours * 2) / 2);
 }
 
-function estimateHourlyQuote(durationMinutes: number) {
-  const baselineRatePerHour = 25;
-  const rateLow = baselineRatePerHour * 0.9;
-  const rateHigh = baselineRatePerHour * 1.3;
-  const billedHours = roundToHalfHour(durationMinutes / 60);
+function estimateHourlyQuote(durationMinutes: number, staffRequired: number) {
+  const baseRatePerHour = 25;
+  const extraStaffRatePerHour = 15;
+  const extraStaffCount = Math.max(0, staffRequired - 1);
+  const baseHourly = baseRatePerHour + extraStaffCount * extraStaffRatePerHour;
+  const rateLow = baseHourly * 0.9;
+  const rateHigh = baseHourly * 1.2;
+  const handlingBufferMinutes = Math.max(30, staffRequired * 15);
+  const billedHours = roundToHalfHour((durationMinutes + handlingBufferMinutes) / 60);
   const low = Math.round(billedHours * rateLow);
   const high = Math.max(low + 1, Math.round(billedHours * rateHigh));
-  return { low, high, billedHours };
+  return { low, high, billedHours, baseRatePerHour, extraStaffRatePerHour, extraStaffCount };
 }
 
-export function RoutePreview({ pickupText, dropoffText, onSuggestedWindowMinutes }: RoutePreviewProps) {
+export function RoutePreview({
+  pickupText,
+  dropoffText,
+  staffRequired,
+  onSuggestedWindowMinutes,
+  onEstimateChange
+}: RoutePreviewProps) {
   const mapContainerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<LeafletMap | null>(null);
   const routeLayerRef = useRef<LeafletLayerGroup | null>(null);
@@ -413,22 +439,45 @@ export function RoutePreview({ pickupText, dropoffText, onSuggestedWindowMinutes
     const distance = Number(distanceKm);
     if (Number.isNaN(distance)) return null;
     const driveMinutes = trafficEtaMinutes ?? etaMinutes;
-    return estimateHourlyQuote(driveMinutes);
-  }, [distanceKm, etaMinutes, route, trafficEtaMinutes]);
+    return estimateHourlyQuote(driveMinutes, staffRequired);
+  }, [distanceKm, etaMinutes, route, staffRequired, trafficEtaMinutes]);
 
   useEffect(() => {
     onSuggestedWindowMinutes?.(suggestedWindowMinutes);
   }, [onSuggestedWindowMinutes, suggestedWindowMinutes]);
 
+  useEffect(() => {
+    if (!route || !quoteRange || !distanceKm || !etaMinutes) {
+      onEstimateChange?.(null);
+      return;
+    }
+    const distance = Number(distanceKm);
+    if (Number.isNaN(distance)) {
+      onEstimateChange?.(null);
+      return;
+    }
+    onEstimateChange?.({
+      lowEur: quoteRange.low,
+      highEur: quoteRange.high,
+      billedHours: quoteRange.billedHours,
+      provider: route.provider,
+      distanceKm: distance,
+      etaMinutes,
+      trafficEtaMinutes,
+      trafficLevel,
+      updatedAt: route.updatedAt
+    });
+  }, [distanceKm, etaMinutes, onEstimateChange, quoteRange, route, trafficEtaMinutes, trafficLevel]);
+
   return (
-    <div className="route-panel">
-      <h3>Route Preview</h3>
-      <p className="small">Live estimate based on entered pickup and dropoff addresses.</p>
-      <div className="route-map" ref={mapContainerRef} />
-      {loading ? <p className="small">Calculating route...</p> : null}
-      {error ? <p className="error">{error}</p> : null}
+    <div className="rounded-3xl border border-slate-200 bg-slate-50/80 p-4">
+      <h3 className="text-lg font-semibold text-slate-900">Route Preview</h3>
+      <p className="mt-1 text-sm text-slate-600">Live estimate based on entered pickup and dropoff addresses.</p>
+      <div className="mt-3 h-72 rounded-2xl border border-slate-200 bg-blue-100 md:h-80" ref={mapContainerRef} />
+      {loading ? <p className="mt-2 text-sm text-slate-500">Calculating route...</p> : null}
+      {error ? <p className="mt-2 text-sm text-rose-700">{error}</p> : null}
       {!loading && !error && route ? (
-        <div className="grid">
+        <div className="mt-3 grid gap-2 text-sm text-slate-700">
           <p>
             <strong>Provider:</strong> {route.provider === "google" ? "Google Maps" : "OpenStreetMap/OSRM"}
           </p>
@@ -453,15 +502,18 @@ export function RoutePreview({ pickupText, dropoffText, onSuggestedWindowMinutes
             {quoteRange ? `EUR ${quoteRange.low} - EUR ${quoteRange.high} (rough)` : "Not available"}
           </p>
           {quoteRange ? (
-            <p className="small">
-              Estimate only. Based on approx. {quoteRange.billedHours} billable hour(s) and hourly rate fluctuation
-              around EUR 25/h. Final quote is admin-confirmed.
+            <p className="text-xs text-slate-500">
+              Estimate only. Approx. {quoteRange.billedHours} billable hour(s). Pricing model: EUR{" "}
+              {quoteRange.baseRatePerHour}/h base + EUR {quoteRange.extraStaffRatePerHour}/h per extra staff (
+              {quoteRange.extraStaffCount} extra). Final quote is admin-confirmed.
             </p>
           ) : null}
-          <p className="small">Updated: {new Date(route.updatedAt).toLocaleTimeString()}</p>
+          <p className="text-xs text-slate-500">Updated: {new Date(route.updatedAt).toLocaleTimeString()}</p>
         </div>
       ) : null}
-      {!loading && !route && !error ? <p className="small">Enter both addresses to preview route and ETA.</p> : null}
+      {!loading && !route && !error ? (
+        <p className="mt-2 text-sm text-slate-500">Enter both addresses to preview route and ETA.</p>
+      ) : null}
     </div>
   );
 }

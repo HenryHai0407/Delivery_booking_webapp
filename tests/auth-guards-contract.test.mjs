@@ -9,6 +9,9 @@ const protectedRoutes = [
   "src/app/api/admin/bookings/[id]/assign/route.ts",
   "src/app/api/admin/bookings/[id]/events/route.ts",
   "src/app/api/admin/bookings/[id]/status/route.ts",
+  "src/app/api/admin/bookings/[id]/resend/route.ts",
+  "src/app/api/admin/settings/route.ts",
+  "src/app/api/admin/schedule/check/route.ts",
   "src/app/api/driver/jobs/route.ts",
   "src/app/api/driver/jobs/[id]/status/route.ts",
   "src/app/api/driver/jobs/[id]/pod/route.ts",
@@ -21,4 +24,3 @@ test("protected routes use requireRole guard", () => {
     assert.equal(content.includes("requireRole("), true, `${file} should call requireRole(...)`);
   }
 });
-

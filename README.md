@@ -36,14 +36,20 @@ Next.js App Router delivery booking platform with customer request flow, admin A
 Public:
 - `POST /api/bookings` (idempotent create, requires `contactEmail`)
 - `GET /api/bookings/{publicId}?token=...`
+- `GET /api/public/availability?start=<iso>&duration=120`
 
 Admin (requires authenticated `admin` session):
 - `GET /api/admin/bookings?page=1&pageSize=20&status=&publicId=&dateFrom=&dateTo=`
+- `GET /api/admin/bookings/export?status=&publicId=&dateFrom=&dateTo=&estimateDelta=`
 - `GET /api/admin/stats`
 - `PATCH /api/admin/bookings/{id}`
 - `POST /api/admin/bookings/{id}/assign`
 - `POST /api/admin/bookings/{id}/status` (idempotent)
 - `GET /api/admin/bookings/{id}/events?limit=30`
+- `POST /api/admin/bookings/{id}/resend` (resend ticket/update email)
+- `GET /api/admin/settings`
+- `PATCH /api/admin/settings`
+- `GET /api/admin/schedule/check?start=<iso>&end=<iso>&excludeBookingId=<id>`
 
 Driver (requires authenticated `driver` session):
 - `GET /api/driver/jobs?date=today`
@@ -118,3 +124,23 @@ Health:
 - `npm run check:env`: validates runtime env config (strictness controlled by `DEPLOYMENT_STRICT_ENV`).
 - `npm run deploy:check`: runs env validation + Prisma deploy + production build.
 - Set `DEPLOYMENT_STRICT_ENV=true` in CI/production to enforce integration env requirements.
+
+## E2E browser tests (Playwright)
+- Install Chromium once:
+  ```bash
+  npm run e2e:install
+  ```
+- Run browser E2E tests:
+  ```bash
+  npm run test:e2e
+  ```
+- Optional modes:
+  ```bash
+  npm run test:e2e:headed
+  npm run test:e2e:ui
+  ```
+
+Current E2E specs:
+- Customer wizard happy path (`tests/e2e/customer-wizard.spec.ts`)
+- Admin schedule conflict behavior (`tests/e2e/admin-conflict.spec.ts`)
+- Driver POD-before-complete guard (`tests/e2e/driver-pod-guard.spec.ts`)

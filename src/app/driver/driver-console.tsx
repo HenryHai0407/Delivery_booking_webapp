@@ -24,6 +24,10 @@ type DriverJob = {
     dropoffText: string;
     scheduledWindowStart: string | null;
     scheduledWindowEnd: string | null;
+    pod?: {
+      id: string;
+      photos: Array<{ id: string; storageUrl: string; createdAt: string }>;
+    } | null;
   };
 };
 
@@ -47,8 +51,21 @@ export function DriverConsole() {
   const [loading, setLoading] = useState(false);
   const [updatingId, setUpdatingId] = useState<string | null>(null);
   const [uploadingId, setUploadingId] = useState<string | null>(null);
+  const [uploadErrors, setUploadErrors] = useState<Record<string, string>>({});
+  const [isOnline, setIsOnline] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const applyOnlineState = () => setIsOnline(typeof navigator === "undefined" ? true : navigator.onLine);
+    applyOnlineState();
+    window.addEventListener("online", applyOnlineState);
+    window.addEventListener("offline", applyOnlineState);
+    return () => {
+      window.removeEventListener("online", applyOnlineState);
+      window.removeEventListener("offline", applyOnlineState);
+    };
+  }, []);
 
   const loadJobs = useCallback(async () => {
     setLoading(true);
@@ -82,6 +99,12 @@ export function DriverConsole() {
   async function updateStatus(bookingId: string) {
     const status = statusDrafts[bookingId];
     if (!status) return;
+    const job = jobs.find((v) => v.booking.id === bookingId);
+    const hasPod = Boolean(job?.booking.pod?.photos?.length);
+    if (status === "completed" && !hasPod) {
+      setError("POD photo is required before setting status to completed.");
+      return;
+    }
     setUpdatingId(bookingId);
     setError(null);
     setMessage(null);
@@ -121,6 +144,7 @@ export function DriverConsole() {
       return;
     }
     setUploadingId(bookingId);
+    setUploadErrors((current) => ({ ...current, [bookingId]: "" }));
     setError(null);
     setMessage(null);
     try {
@@ -171,8 +195,12 @@ export function DriverConsole() {
 
       setMessage(`POD recorded for booking ${bookingId}.`);
       setSelectedFiles((current) => ({ ...current, [bookingId]: null }));
+      setUploadErrors((current) => ({ ...current, [bookingId]: "" }));
+      await loadJobs();
     } catch (err) {
-      setError((err as Error).message);
+      const msg = (err as Error).message;
+      setError(msg);
+      setUploadErrors((current) => ({ ...current, [bookingId]: msg }));
     } finally {
       setUploadingId(null);
     }
@@ -186,6 +214,7 @@ export function DriverConsole() {
       </button>
       {error ? <p className="error">{error}</p> : null}
       {message ? <p className="success">{message}</p> : null}
+      {!isOnline ? <p className="error">You are offline. Upload and status updates are paused until connection returns.</p> : null}
       {jobs.length === 0 && !loading ? <p>No jobs for today.</p> : null}
       {jobs.map((job) => (
         <div key={job.id} className="card">
@@ -203,6 +232,20 @@ export function DriverConsole() {
               ? `${new Date(job.booking.scheduledWindowStart).toLocaleString()} - ${new Date(job.booking.scheduledWindowEnd).toLocaleString()}`
               : "Not scheduled"}
           </p>
+          <p className="small">
+            POD status:{" "}
+            {job.booking.pod?.photos?.length
+              ? `uploaded (${new Date(job.booking.pod.photos[0].createdAt).toLocaleString()})`
+              : "not uploaded"}
+          </p>
+          {job.booking.pod?.photos?.[0]?.storageUrl ? (
+            <p className="small">
+              Latest POD:
+              <a href={job.booking.pod.photos[0].storageUrl} target="_blank" rel="noreferrer">
+                {" view photo"}
+              </a>
+            </p>
+          ) : null}
 
           <div className="grid">
             <label>
@@ -217,13 +260,13 @@ export function DriverConsole() {
                 }
               >
                 {statusChoices.map((status) => (
-                  <option key={status} value={status}>
+                  <option key={status} value={status} disabled={status === "completed" && !job.booking.pod?.photos?.length}>
                     {status}
                   </option>
                 ))}
               </select>
             </label>
-            <button onClick={() => void updateStatus(job.booking.id)} disabled={updatingId === job.booking.id}>
+            <button onClick={() => void updateStatus(job.booking.id)} disabled={updatingId === job.booking.id || !isOnline}>
               {updatingId === job.booking.id ? "Updating..." : "Save status"}
             </button>
           </div>
@@ -233,9 +276,17 @@ export function DriverConsole() {
               POD photo
               <input type="file" accept="image/*" onChange={(e) => onSelectFile(job.booking.id, e)} />
             </label>
-            <button onClick={() => void uploadPod(job.booking.id)} disabled={uploadingId === job.booking.id}>
+            <button onClick={() => void uploadPod(job.booking.id)} disabled={uploadingId === job.booking.id || !isOnline}>
               {uploadingId === job.booking.id ? "Recording POD..." : "Record POD upload"}
             </button>
+            {uploadErrors[job.booking.id] ? (
+              <p className="error">
+                Upload failed: {uploadErrors[job.booking.id]}{" "}
+                <button onClick={() => void uploadPod(job.booking.id)} disabled={uploadingId === job.booking.id || !isOnline}>
+                  Retry
+                </button>
+              </p>
+            ) : null}
           </div>
         </div>
       ))}

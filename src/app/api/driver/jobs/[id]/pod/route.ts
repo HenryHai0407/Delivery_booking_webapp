@@ -2,8 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { requireRole } from "@/lib/auth";
 
-export async function POST(req: NextRequest, { params }: { params: { id: string } }) {
+export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
+    const { id } = await params;
     const { userId: actorUserId } = await requireRole("driver");
     const body = (await req.json()) as {
       objectKey?: string;
@@ -15,16 +16,16 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
       return NextResponse.json({ error: "Missing objectKey or storageUrl" }, { status: 400 });
     }
 
-    const booking = await prisma.booking.findUnique({ where: { id: params.id } });
+    const booking = await prisma.booking.findUnique({ where: { id } });
     if (!booking) {
       return NextResponse.json({ error: "Booking not found" }, { status: 404 });
     }
 
     const pod = await prisma.pod.upsert({
-      where: { bookingId: params.id },
+      where: { bookingId: id },
       update: { notes: body.notes || undefined },
       create: {
-        bookingId: params.id,
+        bookingId: id,
         notes: body.notes
       }
     });
@@ -51,12 +52,13 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
 
     await prisma.bookingEvent.create({
       data: {
-        bookingId: params.id,
+        bookingId: id,
         actorUserId,
         eventType: "pod_uploaded",
         payloadJson: JSON.stringify({
           objectKey: body.objectKey,
-          photoId: photo.id
+          photoId: photo.id,
+          storageUrl: body.storageUrl
         })
       }
     });

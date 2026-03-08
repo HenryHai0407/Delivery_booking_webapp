@@ -11,14 +11,15 @@ function safeJson(value: string): Record<string, unknown> {
   return {};
 }
 
-export async function GET(req: NextRequest, { params }: { params: { publicId: string } }) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ publicId: string }> }) {
+  const { publicId } = await params;
   const token = req.nextUrl.searchParams.get("token");
   if (!token) {
     return NextResponse.json({ error: "Missing token" }, { status: 401 });
   }
 
   const booking = await prisma.booking.findFirst({
-    where: { publicId: params.publicId, customerToken: token },
+    where: { publicId, customerToken: token },
     select: {
       publicId: true,
       status: true,

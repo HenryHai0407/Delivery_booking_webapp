@@ -1,0 +1,1069 @@
+0 verbose cli D:\Node.js\node.exe D:\Node.js\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.16.0
+3 silly config load:file:D:\Node.js\node_modules\npm\npmrc
+4 silly config load:file:D:\projects\delivery_app\Delivery_booking_webapp\.npmrc
+5 silly config load:file:C:\Users\ThuBy\.npmrc
+6 silly config load:file:C:\Users\ThuBy\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install @tailwindcss/postcss
+8 verbose argv "install" "--save-dev" "@tailwindcss/postcss" "--cache" ".npm-cache"
+9 verbose logfile logs-max:10 dir:D:\projects\delivery_app\Delivery_booking_webapp\.npm-cache\_logs\2026-03-08T16_17_02_167Z-
+10 verbose logfile D:\projects\delivery_app\Delivery_booking_webapp\.npm-cache\_logs\2026-03-08T16_17_02_167Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly fetch manifest @tailwindcss/postcss@*
+15 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2fpostcss cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2fpostcss 220ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2fpostcss set size:undefined disposed:false
+18 silly placeDep ROOT @tailwindcss/postcss@4.2.1 OK for: delivery-booking-webapp@0.1.0 want: *
+19 silly fetch manifest @alloc/quick-lru@^5.2.0
+20 silly packumentCache full:https://registry.npmjs.org/@alloc%2fquick-lru cache-miss
+21 silly fetch manifest @tailwindcss/node@4.2.1
+22 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2fnode cache-miss
+23 silly fetch manifest @tailwindcss/oxide@4.2.1
+24 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/@alloc%2fquick-lru 82ms (cache miss)
+26 silly packumentCache full:https://registry.npmjs.org/@alloc%2fquick-lru set size:undefined disposed:false
+27 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide 215ms (cache miss)
+28 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide set size:undefined disposed:false
+29 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2fnode 243ms (cache miss)
+30 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2fnode set size:undefined disposed:false
+31 silly placeDep ROOT @alloc/quick-lru@5.2.0 OK for: @tailwindcss/postcss@4.2.1 want: ^5.2.0
+32 silly placeDep ROOT @tailwindcss/node@4.2.1 OK for: @tailwindcss/postcss@4.2.1 want: 4.2.1
+33 silly placeDep ROOT @tailwindcss/oxide@4.2.1 OK for: @tailwindcss/postcss@4.2.1 want: 4.2.1
+34 silly fetch manifest jiti@^2.6.1
+35 silly packumentCache full:https://registry.npmjs.org/jiti cache-miss
+36 silly fetch manifest lightningcss@1.31.1
+37 silly packumentCache full:https://registry.npmjs.org/lightningcss cache-miss
+38 silly fetch manifest magic-string@^0.30.21
+39 silly packumentCache full:https://registry.npmjs.org/magic-string cache-miss
+40 silly fetch manifest enhanced-resolve@^5.19.0
+41 silly packumentCache full:https://registry.npmjs.org/enhanced-resolve cache-miss
+42 silly fetch manifest @jridgewell/remapping@^2.3.5
+43 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fremapping cache-miss
+44 silly fetch manifest @tailwindcss/oxide-darwin-x64@4.2.1
+45 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-darwin-x64 cache-miss
+46 silly fetch manifest @tailwindcss/oxide-freebsd-x64@4.2.1
+47 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-freebsd-x64 cache-miss
+48 http fetch GET 200 https://registry.npmjs.org/lightningcss 68ms (cache miss)
+49 silly packumentCache full:https://registry.npmjs.org/lightningcss set size:undefined disposed:false
+50 silly fetch manifest @tailwindcss/oxide-wasm32-wasi@4.2.1
+51 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-wasm32-wasi cache-miss
+52 http fetch GET 200 https://registry.npmjs.org/jiti 76ms (cache miss)
+53 silly packumentCache full:https://registry.npmjs.org/jiti set size:undefined disposed:false
+54 silly fetch manifest @tailwindcss/oxide-darwin-arm64@4.2.1
+55 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-darwin-arm64 cache-miss
+56 http fetch GET 200 https://registry.npmjs.org/enhanced-resolve 106ms (cache miss)
+57 silly packumentCache full:https://registry.npmjs.org/enhanced-resolve set size:undefined disposed:false
+58 silly fetch manifest @tailwindcss/oxide-android-arm64@4.2.1
+59 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-android-arm64 cache-miss
+60 http fetch GET 200 https://registry.npmjs.org/magic-string 237ms (cache miss)
+61 silly packumentCache full:https://registry.npmjs.org/magic-string set size:undefined disposed:false
+62 silly fetch manifest @tailwindcss/oxide-linux-x64-gnu@4.2.1
+63 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-linux-x64-gnu cache-miss
+64 http fetch GET 200 https://registry.npmjs.org/@jridgewell%2fremapping 325ms (cache miss)
+65 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fremapping set size:undefined disposed:false
+66 silly fetch manifest @tailwindcss/oxide-linux-x64-musl@4.2.1
+67 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-linux-x64-musl cache-miss
+68 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide-darwin-arm64 510ms (cache miss)
+69 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-darwin-arm64 set size:undefined disposed:false
+70 silly fetch manifest @tailwindcss/oxide-win32-x64-msvc@4.2.1
+71 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-win32-x64-msvc cache-miss
+72 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide-wasm32-wasi 563ms (cache miss)
+73 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-wasm32-wasi set size:undefined disposed:false
+74 silly fetch manifest @tailwindcss/oxide-linux-arm64-gnu@4.2.1
+75 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-linux-arm64-gnu cache-miss
+76 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide-android-arm64 561ms (cache miss)
+77 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-android-arm64 set size:undefined disposed:false
+78 silly fetch manifest @tailwindcss/oxide-linux-arm64-musl@4.2.1
+79 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-linux-arm64-musl cache-miss
+80 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide-linux-x64-musl 532ms (cache miss)
+81 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-linux-x64-musl set size:undefined disposed:false
+82 silly fetch manifest @tailwindcss/oxide-win32-arm64-msvc@4.2.1
+83 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-win32-arm64-msvc cache-miss
+84 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide-darwin-x64 926ms (cache miss)
+85 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-darwin-x64 set size:undefined disposed:false
+86 silly fetch manifest @tailwindcss/oxide-linux-arm-gnueabihf@4.2.1
+87 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-linux-arm-gnueabihf cache-miss
+88 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide-freebsd-x64 1083ms (cache miss)
+89 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-freebsd-x64 set size:undefined disposed:false
+90 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide-linux-x64-gnu 994ms (cache miss)
+91 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-linux-x64-gnu set size:undefined disposed:false
+92 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide-linux-arm64-musl 633ms (cache miss)
+93 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-linux-arm64-musl set size:undefined disposed:false
+94 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide-linux-arm64-gnu 694ms (cache miss)
+95 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-linux-arm64-gnu set size:undefined disposed:false
+96 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide-win32-x64-msvc 779ms (cache miss)
+97 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-win32-x64-msvc set size:undefined disposed:false
+98 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide-win32-arm64-msvc 530ms (cache miss)
+99 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-win32-arm64-msvc set size:undefined disposed:false
+100 http fetch GET 200 https://registry.npmjs.org/@tailwindcss%2foxide-linux-arm-gnueabihf 916ms (cache miss)
+101 silly packumentCache full:https://registry.npmjs.org/@tailwindcss%2foxide-linux-arm-gnueabihf set size:undefined disposed:false
+102 silly placeDep ROOT @jridgewell/remapping@2.3.5 OK for: @tailwindcss/node@4.2.1 want: ^2.3.5
+103 silly placeDep ROOT enhanced-resolve@5.20.0 OK for: @tailwindcss/node@4.2.1 want: ^5.19.0
+104 silly placeDep ROOT jiti@2.6.1 OK for: @tailwindcss/node@4.2.1 want: ^2.6.1
+105 silly placeDep ROOT lightningcss@1.31.1 OK for: @tailwindcss/node@4.2.1 want: 1.31.1
+106 silly placeDep ROOT magic-string@0.30.21 OK for: @tailwindcss/node@4.2.1 want: ^0.30.21
+107 silly fetch manifest @jridgewell/gen-mapping@^0.3.5
+108 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fgen-mapping cache-miss
+109 silly fetch manifest @jridgewell/trace-mapping@^0.3.24
+110 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2ftrace-mapping cache-miss
+111 silly fetch manifest graceful-fs@^4.2.4
+112 silly packumentCache full:https://registry.npmjs.org/graceful-fs cache-miss
+113 silly fetch manifest tapable@^2.3.0
+114 silly packumentCache full:https://registry.npmjs.org/tapable cache-miss
+115 silly fetch manifest lightningcss-darwin-x64@1.31.1
+116 silly packumentCache full:https://registry.npmjs.org/lightningcss-darwin-x64 cache-miss
+117 silly fetch manifest lightningcss-linux-x64-gnu@1.31.1
+118 silly packumentCache full:https://registry.npmjs.org/lightningcss-linux-x64-gnu cache-miss
+119 silly fetch manifest lightningcss-win32-x64-msvc@1.31.1
+120 silly packumentCache full:https://registry.npmjs.org/lightningcss-win32-x64-msvc cache-miss
+121 http fetch GET 200 https://registry.npmjs.org/tapable 64ms (cache miss)
+122 silly packumentCache full:https://registry.npmjs.org/tapable set size:undefined disposed:false
+123 silly fetch manifest lightningcss-win32-arm64-msvc@1.31.1
+124 silly packumentCache full:https://registry.npmjs.org/lightningcss-win32-arm64-msvc cache-miss
+125 http fetch GET 200 https://registry.npmjs.org/graceful-fs 70ms (cache miss)
+126 silly packumentCache full:https://registry.npmjs.org/graceful-fs set size:undefined disposed:false
+127 silly fetch manifest lightningcss-darwin-arm64@1.31.1
+128 silly packumentCache full:https://registry.npmjs.org/lightningcss-darwin-arm64 cache-miss
+129 http fetch GET 200 https://registry.npmjs.org/@jridgewell%2ftrace-mapping 104ms (cache miss)
+130 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2ftrace-mapping set size:undefined disposed:false
+131 silly fetch manifest lightningcss-linux-arm64-gnu@1.31.1
+132 silly packumentCache full:https://registry.npmjs.org/lightningcss-linux-arm64-gnu cache-miss
+133 http fetch GET 200 https://registry.npmjs.org/@jridgewell%2fgen-mapping 131ms (cache miss)
+134 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fgen-mapping set size:undefined disposed:false
+135 silly fetch manifest lightningcss-linux-arm-gnueabihf@1.31.1
+136 silly packumentCache full:https://registry.npmjs.org/lightningcss-linux-arm-gnueabihf cache-miss
+137 http fetch GET 200 https://registry.npmjs.org/lightningcss-darwin-x64 237ms (cache miss)
+138 silly packumentCache full:https://registry.npmjs.org/lightningcss-darwin-x64 set size:undefined disposed:false
+139 silly fetch manifest lightningcss-linux-arm64-musl@1.31.1
+140 silly packumentCache full:https://registry.npmjs.org/lightningcss-linux-arm64-musl cache-miss
+141 http fetch GET 200 https://registry.npmjs.org/lightningcss-linux-arm64-gnu 238ms (cache miss)
+142 silly packumentCache full:https://registry.npmjs.org/lightningcss-linux-arm64-gnu set size:undefined disposed:false
+143 silly fetch manifest lightningcss-linux-x64-musl@1.31.1
+144 silly packumentCache full:https://registry.npmjs.org/lightningcss-linux-x64-musl cache-miss
+145 http fetch GET 200 https://registry.npmjs.org/lightningcss-linux-arm64-musl 221ms (cache miss)
+146 silly packumentCache full:https://registry.npmjs.org/lightningcss-linux-arm64-musl set size:undefined disposed:false
+147 silly fetch manifest lightningcss-freebsd-x64@1.31.1
+148 silly packumentCache full:https://registry.npmjs.org/lightningcss-freebsd-x64 cache-miss
+149 http fetch GET 200 https://registry.npmjs.org/lightningcss-linux-x64-musl 252ms (cache miss)
+150 silly packumentCache full:https://registry.npmjs.org/lightningcss-linux-x64-musl set size:undefined disposed:false
+151 silly fetch manifest lightningcss-android-arm64@1.31.1
+152 silly packumentCache full:https://registry.npmjs.org/lightningcss-android-arm64 cache-miss
+153 http fetch GET 200 https://registry.npmjs.org/lightningcss-linux-x64-gnu 618ms (cache miss)
+154 silly packumentCache full:https://registry.npmjs.org/lightningcss-linux-x64-gnu set size:undefined disposed:false
+155 silly fetch manifest @jridgewell/sourcemap-codec@^1.5.5
+156 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fsourcemap-codec cache-miss
+157 http fetch GET 200 https://registry.npmjs.org/lightningcss-win32-x64-msvc 632ms (cache miss)
+158 silly packumentCache full:https://registry.npmjs.org/lightningcss-win32-x64-msvc set size:undefined disposed:false
+159 http fetch GET 200 https://registry.npmjs.org/lightningcss-darwin-arm64 589ms (cache miss)
+160 silly packumentCache full:https://registry.npmjs.org/lightningcss-darwin-arm64 set size:undefined disposed:false
+161 http fetch GET 200 https://registry.npmjs.org/lightningcss-win32-arm64-msvc 616ms (cache miss)
+162 silly packumentCache full:https://registry.npmjs.org/lightningcss-win32-arm64-msvc set size:undefined disposed:false
+163 http fetch GET 200 https://registry.npmjs.org/lightningcss-freebsd-x64 244ms (cache miss)
+164 silly packumentCache full:https://registry.npmjs.org/lightningcss-freebsd-x64 set size:undefined disposed:false
+165 http fetch GET 200 https://registry.npmjs.org/@jridgewell%2fsourcemap-codec 104ms (cache miss)
+166 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fsourcemap-codec set size:undefined disposed:false
+167 http fetch GET 200 https://registry.npmjs.org/lightningcss-linux-arm-gnueabihf 615ms (cache miss)
+168 silly packumentCache full:https://registry.npmjs.org/lightningcss-linux-arm-gnueabihf set size:undefined disposed:false
+169 http fetch GET 200 https://registry.npmjs.org/lightningcss-android-arm64 229ms (cache miss)
+170 silly packumentCache full:https://registry.npmjs.org/lightningcss-android-arm64 set size:undefined disposed:false
+171 silly placeDep ROOT @jridgewell/gen-mapping@0.3.13 OK for: @jridgewell/remapping@2.3.5 want: ^0.3.5
+172 silly placeDep ROOT @jridgewell/trace-mapping@0.3.31 OK for: @jridgewell/remapping@2.3.5 want: ^0.3.24
+173 silly fetch manifest @jridgewell/sourcemap-codec@^1.5.0
+174 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fsourcemap-codec cache-miss
+175 silly fetch manifest @jridgewell/resolve-uri@^3.1.0
+176 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fresolve-uri cache-miss
+177 silly fetch manifest @jridgewell/sourcemap-codec@^1.4.14
+178 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fsourcemap-codec cache-miss
+179 http cache https://registry.npmjs.org/@jridgewell%2fsourcemap-codec 16ms (cache hit)
+180 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fsourcemap-codec set size:59275 disposed:false
+181 http cache https://registry.npmjs.org/@jridgewell%2fsourcemap-codec 17ms (cache hit)
+182 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fsourcemap-codec set size:59275 disposed:false
+183 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fsourcemap-codec dispose
+184 http fetch GET 200 https://registry.npmjs.org/@jridgewell%2fresolve-uri 100ms (cache miss)
+185 silly packumentCache full:https://registry.npmjs.org/@jridgewell%2fresolve-uri set size:undefined disposed:false
+186 silly placeDep ROOT @jridgewell/sourcemap-codec@1.5.5 OK for: @jridgewell/gen-mapping@0.3.13 want: ^1.5.0
+187 silly placeDep ROOT @jridgewell/resolve-uri@3.1.2 OK for: @jridgewell/trace-mapping@0.3.31 want: ^3.1.0
+188 silly placeDep ROOT @tailwindcss/oxide-android-arm64@4.2.1 OK for: @tailwindcss/oxide@4.2.1 want: 4.2.1
+189 silly placeDep ROOT @tailwindcss/oxide-darwin-arm64@4.2.1 OK for: @tailwindcss/oxide@4.2.1 want: 4.2.1
+190 silly placeDep ROOT @tailwindcss/oxide-darwin-x64@4.2.1 OK for: @tailwindcss/oxide@4.2.1 want: 4.2.1
+191 silly placeDep ROOT @tailwindcss/oxide-freebsd-x64@4.2.1 OK for: @tailwindcss/oxide@4.2.1 want: 4.2.1
+192 silly placeDep ROOT @tailwindcss/oxide-linux-arm-gnueabihf@4.2.1 OK for: @tailwindcss/oxide@4.2.1 want: 4.2.1
+193 silly placeDep ROOT @tailwindcss/oxide-linux-arm64-gnu@4.2.1 OK for: @tailwindcss/oxide@4.2.1 want: 4.2.1
+194 silly placeDep ROOT @tailwindcss/oxide-linux-arm64-musl@4.2.1 OK for: @tailwindcss/oxide@4.2.1 want: 4.2.1
+195 silly placeDep ROOT @tailwindcss/oxide-linux-x64-gnu@4.2.1 OK for: @tailwindcss/oxide@4.2.1 want: 4.2.1
+196 silly placeDep ROOT @tailwindcss/oxide-linux-x64-musl@4.2.1 OK for: @tailwindcss/oxide@4.2.1 want: 4.2.1
+197 silly placeDep ROOT @tailwindcss/oxide-wasm32-wasi@4.2.1 OK for: @tailwindcss/oxide@4.2.1 want: 4.2.1
+198 silly placeDep ROOT @tailwindcss/oxide-win32-arm64-msvc@4.2.1 OK for: @tailwindcss/oxide@4.2.1 want: 4.2.1
+199 silly placeDep ROOT @tailwindcss/oxide-win32-x64-msvc@4.2.1 OK for: @tailwindcss/oxide@4.2.1 want: 4.2.1
+200 silly placeDep ROOT graceful-fs@4.2.11 OK for: enhanced-resolve@5.20.0 want: ^4.2.4
+201 silly placeDep ROOT tapable@2.3.0 OK for: enhanced-resolve@5.20.0 want: ^2.3.0
+202 silly placeDep ROOT lightningcss-android-arm64@1.31.1 OK for: lightningcss@1.31.1 want: 1.31.1
+203 silly placeDep ROOT lightningcss-darwin-arm64@1.31.1 OK for: lightningcss@1.31.1 want: 1.31.1
+204 silly placeDep ROOT lightningcss-darwin-x64@1.31.1 OK for: lightningcss@1.31.1 want: 1.31.1
+205 silly placeDep ROOT lightningcss-freebsd-x64@1.31.1 OK for: lightningcss@1.31.1 want: 1.31.1
+206 silly placeDep ROOT lightningcss-linux-arm-gnueabihf@1.31.1 OK for: lightningcss@1.31.1 want: 1.31.1
+207 silly placeDep ROOT lightningcss-linux-arm64-gnu@1.31.1 OK for: lightningcss@1.31.1 want: 1.31.1
+208 silly placeDep ROOT lightningcss-linux-arm64-musl@1.31.1 OK for: lightningcss@1.31.1 want: 1.31.1
+209 silly placeDep ROOT lightningcss-linux-x64-gnu@1.31.1 OK for: lightningcss@1.31.1 want: 1.31.1
+210 silly placeDep ROOT lightningcss-linux-x64-musl@1.31.1 OK for: lightningcss@1.31.1 want: 1.31.1
+211 silly placeDep ROOT lightningcss-win32-arm64-msvc@1.31.1 OK for: lightningcss@1.31.1 want: 1.31.1
+212 silly placeDep ROOT lightningcss-win32-x64-msvc@1.31.1 OK for: lightningcss@1.31.1 want: 1.31.1
+213 silly reify moves {}
+214 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@tailwindcss\oxide-wasm32-wasi
+215 silly reify mark deleted [
+215 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@tailwindcss\\oxide-wasm32-wasi'
+215 silly reify ]
+216 silly audit bulk request {
+216 silly audit   '@auth/core': [ '0.41.1', '0.41.0' ],
+216 silly audit   '@auth/prisma-adapter': [ '2.11.1' ],
+216 silly audit   '@emnapi/core': [ '1.8.1' ],
+216 silly audit   '@emnapi/runtime': [ '1.8.1' ],
+216 silly audit   '@emnapi/wasi-threads': [ '1.1.0' ],
+216 silly audit   '@eslint-community/eslint-utils': [ '4.9.1' ],
+216 silly audit   '@eslint-community/regexpp': [ '4.12.2' ],
+216 silly audit   '@eslint/eslintrc': [ '2.1.4' ],
+216 silly audit   '@eslint/js': [ '8.57.1' ],
+216 silly audit   '@hookform/resolvers': [ '5.2.2' ],
+216 silly audit   '@humanwhocodes/config-array': [ '0.13.0' ],
+216 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+216 silly audit   '@humanwhocodes/object-schema': [ '2.0.3' ],
+216 silly audit   '@img/colour': [ '1.1.0' ],
+216 silly audit   '@img/sharp-darwin-arm64': [ '0.34.5' ],
+216 silly audit   '@img/sharp-darwin-x64': [ '0.34.5' ],
+216 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.2.4' ],
+216 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.2.4' ],
+216 silly audit   '@img/sharp-libvips-linux-arm': [ '1.2.4' ],
+216 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.2.4' ],
+216 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.2.4' ],
+216 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.2.4' ],
+216 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.2.4' ],
+216 silly audit   '@img/sharp-libvips-linux-x64': [ '1.2.4' ],
+216 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.2.4' ],
+216 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.2.4' ],
+216 silly audit   '@img/sharp-linux-arm': [ '0.34.5' ],
+216 silly audit   '@img/sharp-linux-arm64': [ '0.34.5' ],
+216 silly audit   '@img/sharp-linux-ppc64': [ '0.34.5' ],
+216 silly audit   '@img/sharp-linux-riscv64': [ '0.34.5' ],
+216 silly audit   '@img/sharp-linux-s390x': [ '0.34.5' ],
+216 silly audit   '@img/sharp-linux-x64': [ '0.34.5' ],
+216 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.34.5' ],
+216 silly audit   '@img/sharp-linuxmusl-x64': [ '0.34.5' ],
+216 silly audit   '@img/sharp-wasm32': [ '0.34.5' ],
+216 silly audit   '@img/sharp-win32-arm64': [ '0.34.5' ],
+216 silly audit   '@img/sharp-win32-ia32': [ '0.34.5' ],
+216 silly audit   '@img/sharp-win32-x64': [ '0.34.5' ],
+216 silly audit   '@napi-rs/wasm-runtime': [ '0.2.12' ],
+216 silly audit   '@next/env': [ '15.5.12' ],
+216 silly audit   '@next/eslint-plugin-next': [ '15.5.12' ],
+216 silly audit   '@next/swc-darwin-arm64': [ '15.5.12' ],
+216 silly audit   '@next/swc-darwin-x64': [ '15.5.12' ],
+216 silly audit   '@next/swc-linux-arm64-gnu': [ '15.5.12' ],
+216 silly audit   '@next/swc-linux-arm64-musl': [ '15.5.12' ],
+216 silly audit   '@next/swc-linux-x64-gnu': [ '15.5.12' ],
+216 silly audit   '@next/swc-linux-x64-musl': [ '15.5.12' ],
+216 silly audit   '@next/swc-win32-arm64-msvc': [ '15.5.12' ],
+216 silly audit   '@next/swc-win32-x64-msvc': [ '15.5.12' ],
+216 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+216 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+216 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+216 silly audit   '@nolyfill/is-core-module': [ '1.0.39' ],
+216 silly audit   '@panva/hkdf': [ '1.2.1' ],
+216 silly audit   '@prisma/client': [ '5.22.0' ],
+216 silly audit   '@prisma/debug': [ '5.22.0' ],
+216 silly audit   '@prisma/engines': [ '5.22.0' ],
+216 silly audit   '@prisma/engines-version': [ '5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2' ],
+216 silly audit   '@prisma/fetch-engine': [ '5.22.0' ],
+216 silly audit   '@prisma/get-platform': [ '5.22.0' ],
+216 silly audit   '@rtsao/scc': [ '1.1.0' ],
+216 silly audit   '@rushstack/eslint-patch': [ '1.16.1' ],
+216 silly audit   '@standard-schema/utils': [ '0.3.0' ],
+216 silly audit   '@swc/helpers': [ '0.5.15' ],
+216 silly audit   '@tybys/wasm-util': [ '0.10.1' ],
+216 silly audit   '@types/json5': [ '0.0.29' ],
+216 silly audit   '@types/node': [ '20.19.37' ],
+216 silly audit   '@types/react': [ '19.2.14' ],
+216 silly audit   '@types/react-dom': [ '19.2.3' ],
+216 silly audit   '@typescript-eslint/eslint-plugin': [ '8.56.1' ],
+216 silly audit   ignore: [ '7.0.5', '5.3.2' ],
+216 silly audit   '@typescript-eslint/parser': [ '8.56.1' ],
+216 silly audit   '@typescript-eslint/project-service': [ '8.56.1' ],
+216 silly audit   '@typescript-eslint/scope-manager': [ '8.56.1' ],
+216 silly audit   '@typescript-eslint/tsconfig-utils': [ '8.56.1' ],
+216 silly audit   '@typescript-eslint/type-utils': [ '8.56.1' ],
+216 silly audit   '@typescript-eslint/types': [ '8.56.1' ],
+216 silly audit   '@typescript-eslint/typescript-estree': [ '8.56.1' ],
+216 silly audit   'balanced-match': [ '4.0.4', '1.0.2' ],
+216 silly audit   'brace-expansion': [ '5.0.4', '1.1.12' ],
+216 silly audit   minimatch: [ '10.2.4', '3.1.5' ],
+216 silly audit   '@typescript-eslint/utils': [ '8.56.1' ],
+216 silly audit   '@typescript-eslint/visitor-keys': [ '8.56.1' ],
+216 silly audit   'eslint-visitor-keys': [ '5.0.1', '3.4.3' ],
+216 silly audit   '@ungap/structured-clone': [ '1.3.0' ],
+216 silly audit   '@unrs/resolver-binding-android-arm-eabi': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-android-arm64': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-darwin-arm64': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-darwin-x64': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-freebsd-x64': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-linux-arm-gnueabihf': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-linux-arm-musleabihf': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-linux-arm64-gnu': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-linux-arm64-musl': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-linux-ppc64-gnu': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-linux-riscv64-gnu': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-linux-riscv64-musl': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-linux-s390x-gnu': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-linux-x64-gnu': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-linux-x64-musl': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-wasm32-wasi': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-win32-arm64-msvc': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-win32-ia32-msvc': [ '1.11.1' ],
+216 silly audit   '@unrs/resolver-binding-win32-x64-msvc': [ '1.11.1' ],
+216 silly audit   acorn: [ '8.16.0' ],
+216 silly audit   'acorn-jsx': [ '5.3.2' ],
+216 silly audit   ajv: [ '6.14.0' ],
+216 silly audit   'ansi-regex': [ '5.0.1' ],
+216 silly audit   'ansi-styles': [ '4.3.0' ],
+216 silly audit   argparse: [ '2.0.1' ],
+216 silly audit   'aria-query': [ '5.3.2' ],
+216 silly audit   'array-buffer-byte-length': [ '1.0.2' ],
+216 silly audit   'array-includes': [ '3.1.9' ],
+216 silly audit   'array.prototype.findlast': [ '1.2.5' ],
+216 silly audit   'array.prototype.findlastindex': [ '1.2.6' ],
+216 silly audit   'array.prototype.flat': [ '1.3.3' ],
+216 silly audit   'array.prototype.flatmap': [ '1.3.3' ],
+216 silly audit   'array.prototype.tosorted': [ '1.1.4' ],
+216 silly audit   'arraybuffer.prototype.slice': [ '1.0.4' ],
+216 silly audit   'ast-types-flow': [ '0.0.8' ],
+216 silly audit   'async-function': [ '1.0.0' ],
+216 silly audit   autoprefixer: [ '10.4.27' ],
+216 silly audit   'available-typed-arrays': [ '1.0.7' ],
+216 silly audit   'axe-core': [ '4.11.1' ],
+216 silly audit   'axobject-query': [ '4.1.0' ],
+216 silly audit   'baseline-browser-mapping': [ '2.10.0' ],
+216 silly audit   braces: [ '3.0.3' ],
+216 silly audit   browserslist: [ '4.28.1' ],
+216 silly audit   'call-bind': [ '1.0.8' ],
+216 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+216 silly audit   'call-bound': [ '1.0.4' ],
+216 silly audit   callsites: [ '3.1.0' ],
+216 silly audit   'caniuse-lite': [ '1.0.30001777' ],
+216 silly audit   chalk: [ '4.1.2' ],
+216 silly audit   'class-variance-authority': [ '0.7.1' ],
+216 silly audit   'client-only': [ '0.0.1' ],
+216 silly audit   clsx: [ '2.1.1' ],
+216 silly audit   'color-convert': [ '2.0.1' ],
+216 silly audit   'color-name': [ '1.1.4' ],
+216 silly audit   'concat-map': [ '0.0.1' ],
+216 silly audit   'cross-spawn': [ '7.0.6' ],
+216 silly audit   csstype: [ '3.2.3' ],
+216 silly audit   'damerau-levenshtein': [ '1.0.8' ],
+216 silly audit   'data-view-buffer': [ '1.0.2' ],
+216 silly audit   'data-view-byte-length': [ '1.0.2' ],
+216 silly audit   'data-view-byte-offset': [ '1.0.1' ],
+216 silly audit   debug: [ '4.4.3', '3.2.7' ],
+216 silly audit   'deep-is': [ '0.1.4' ],
+216 silly audit   'define-data-property': [ '1.1.4' ],
+216 silly audit   'define-properties': [ '1.2.1' ],
+216 silly audit   'detect-libc': [ '2.1.2' ],
+216 silly audit   doctrine: [ '3.0.0', '2.1.0' ],
+216 silly audit   'dunder-proto': [ '1.0.1' ],
+216 silly audit   'electron-to-chromium': [ '1.5.307' ],
+216 silly audit   'emoji-regex': [ '9.2.2' ],
+216 silly audit   'es-abstract': [ '1.24.1' ],
+216 silly audit   'es-define-property': [ '1.0.1' ],
+216 silly audit   'es-errors': [ '1.3.0' ],
+216 silly audit   'es-iterator-helpers': [ '1.2.2' ],
+216 silly audit   'es-object-atoms': [ '1.1.1' ],
+216 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+216 silly audit   'es-shim-unscopables': [ '1.1.0' ],
+216 silly audit   'es-to-primitive': [ '1.3.0' ],
+216 silly audit   escalade: [ '3.2.0' ],
+216 silly audit   'escape-string-regexp': [ '4.0.0' ],
+216 silly audit   eslint: [ '8.57.1' ],
+216 silly audit   'eslint-config-next': [ '15.5.12' ],
+216 silly audit   'eslint-import-resolver-node': [ '0.3.9' ],
+216 silly audit   'eslint-import-resolver-typescript': [ '3.10.1' ],
+216 silly audit   'eslint-module-utils': [ '2.12.1' ],
+216 silly audit   'eslint-plugin-import': [ '2.32.0' ],
+216 silly audit   semver: [ '6.3.1', '7.7.4' ],
+216 silly audit   'eslint-plugin-jsx-a11y': [ '6.10.2' ],
+216 silly audit   'eslint-plugin-react': [ '7.37.5' ],
+216 silly audit   'eslint-plugin-react-hooks': [ '5.2.0' ],
+216 silly audit   resolve: [ '2.0.0-next.6', '1.22.11' ],
+216 silly audit   'eslint-scope': [ '7.2.2' ],
+216 silly audit   espree: [ '9.6.1' ],
+216 silly audit   esquery: [ '1.7.0' ],
+216 silly audit   esrecurse: [ '4.3.0' ],
+216 silly audit   estraverse: [ '5.3.0' ],
+216 silly audit   esutils: [ '2.0.3' ],
+216 silly audit   'fast-deep-equal': [ '3.1.3' ],
+216 silly audit   'fast-glob': [ '3.3.1' ],
+216 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+216 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+216 silly audit   'fast-levenshtein': [ '2.0.6' ],
+216 silly audit   fastq: [ '1.20.1' ],
+216 silly audit   fdir: [ '6.5.0' ],
+216 silly audit   'file-entry-cache': [ '6.0.1' ],
+216 silly audit   'fill-range': [ '7.1.1' ],
+216 silly audit   'find-up': [ '5.0.0' ],
+216 silly audit   'flat-cache': [ '3.2.0' ],
+216 silly audit   flatted: [ '3.3.4' ],
+216 silly audit   'for-each': [ '0.3.5' ],
+216 silly audit   'fraction.js': [ '5.3.4' ],
+216 silly audit   'fs.realpath': [ '1.0.0' ],
+216 silly audit   fsevents: [ '2.3.3' ],
+216 silly audit   'function-bind': [ '1.1.2' ],
+216 silly audit   'function.prototype.name': [ '1.1.8' ],
+216 silly audit   'functions-have-names': [ '1.2.3' ],
+216 silly audit   'generator-function': [ '2.0.1' ],
+216 silly audit   'get-intrinsic': [ '1.3.0' ],
+216 silly audit   'get-proto': [ '1.0.1' ],
+216 silly audit   'get-symbol-description': [ '1.1.0' ],
+216 silly audit   'get-tsconfig': [ '4.13.6' ],
+216 silly audit   globals: [ '13.24.0' ],
+216 silly audit   globalthis: [ '1.0.4' ],
+216 silly audit   gopd: [ '1.2.0' ],
+216 silly audit   graphemer: [ '1.4.0' ],
+216 silly audit   'has-bigints': [ '1.1.0' ],
+216 silly audit   'has-flag': [ '4.0.0' ],
+216 silly audit   'has-property-descriptors': [ '1.0.2' ],
+216 silly audit   'has-proto': [ '1.2.0' ],
+216 silly audit   'has-symbols': [ '1.1.0' ],
+216 silly audit   'has-tostringtag': [ '1.0.2' ],
+216 silly audit   hasown: [ '2.0.2' ],
+216 silly audit   'import-fresh': [ '3.3.1' ],
+216 silly audit   imurmurhash: [ '0.1.4' ],
+216 silly audit   inflight: [ '1.0.6' ],
+216 silly audit   inherits: [ '2.0.4' ],
+216 silly audit   'internal-slot': [ '1.1.0' ],
+216 silly audit   'is-array-buffer': [ '3.0.5' ],
+216 silly audit   'is-async-function': [ '2.1.1' ],
+216 silly audit   'is-bigint': [ '1.1.0' ],
+216 silly audit   'is-boolean-object': [ '1.2.2' ],
+216 silly audit   'is-bun-module': [ '2.0.0' ],
+216 silly audit   'is-callable': [ '1.2.7' ],
+216 silly audit   'is-core-module': [ '2.16.1' ],
+216 silly audit   'is-data-view': [ '1.0.2' ],
+216 silly audit   'is-date-object': [ '1.1.0' ],
+216 silly audit   'is-extglob': [ '2.1.1' ],
+216 silly audit   'is-finalizationregistry': [ '1.1.1' ],
+216 silly audit   'is-generator-function': [ '1.1.2' ],
+216 silly audit   'is-glob': [ '4.0.3' ],
+216 silly audit   'is-map': [ '2.0.3' ],
+216 silly audit   'is-negative-zero': [ '2.0.3' ],
+216 silly audit   'is-number': [ '7.0.0' ],
+216 silly audit   'is-number-object': [ '1.1.1' ],
+216 silly audit   'is-path-inside': [ '3.0.3' ],
+216 silly audit   'is-regex': [ '1.2.1' ],
+216 silly audit   'is-set': [ '2.0.3' ],
+216 silly audit   'is-shared-array-buffer': [ '1.0.4' ],
+216 silly audit   'is-string': [ '1.1.1' ],
+216 silly audit   'is-symbol': [ '1.1.1' ],
+216 silly audit   'is-typed-array': [ '1.1.15' ],
+216 silly audit   'is-weakmap': [ '2.0.2' ],
+216 silly audit   'is-weakref': [ '1.1.1' ],
+216 silly audit   'is-weakset': [ '2.0.4' ],
+216 silly audit   isarray: [ '2.0.5' ],
+216 silly audit   isexe: [ '2.0.0' ],
+216 silly audit   'iterator.prototype': [ '1.1.5' ],
+216 silly audit   jose: [ '6.2.0' ],
+216 silly audit   'js-tokens': [ '4.0.0' ],
+216 silly audit   'js-yaml': [ '4.1.1' ],
+216 silly audit   'json-buffer': [ '3.0.1' ],
+216 silly audit   'json-schema-traverse': [ '0.4.1' ],
+216 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+216 silly audit   json5: [ '1.0.2' ],
+216 silly audit   'jsx-ast-utils': [ '3.3.5' ],
+216 silly audit   keyv: [ '4.5.4' ],
+216 silly audit   'language-subtag-registry': [ '0.3.23' ],
+216 silly audit   'language-tags': [ '1.0.9' ],
+216 silly audit   levn: [ '0.4.1' ],
+216 silly audit   'locate-path': [ '6.0.0' ],
+216 silly audit   'lodash.merge': [ '4.6.2' ],
+216 silly audit   'loose-envify': [ '1.4.0' ],
+216 silly audit   'lucide-react': [ '0.577.0' ],
+216 silly audit   'math-intrinsics': [ '1.1.0' ],
+216 silly audit   merge2: [ '1.4.1' ],
+216 silly audit   micromatch: [ '4.0.8' ],
+216 silly audit   picomatch: [ '2.3.1', '4.0.3' ],
+216 silly audit   minimist: [ '1.2.8' ],
+216 silly audit   ms: [ '2.1.3' ],
+216 silly audit   nanoid: [ '3.3.11' ],
+216 silly audit   'napi-postinstall': [ '0.3.4' ],
+216 silly audit   'natural-compare': [ '1.4.0' ],
+216 silly audit   next: [ '15.5.12' ],
+216 silly audit   'next-auth': [ '5.0.0-beta.30' ],
+216 silly audit   postcss: [ '8.4.31', '8.5.8' ],
+216 silly audit   'node-exports-info': [ '1.6.0' ],
+216 silly audit   'node-releases': [ '2.0.36' ],
+216 silly audit   oauth4webapi: [ '3.8.5' ],
+216 silly audit   'object-assign': [ '4.1.1' ],
+216 silly audit   'object-inspect': [ '1.13.4' ],
+216 silly audit   'object-keys': [ '1.1.1' ],
+216 silly audit   'object.assign': [ '4.1.7' ],
+216 silly audit   'object.entries': [ '1.1.9' ],
+216 silly audit   'object.fromentries': [ '2.0.8' ],
+216 silly audit   'object.groupby': [ '1.0.3' ],
+216 silly audit   'object.values': [ '1.2.1' ],
+216 silly audit   once: [ '1.4.0' ],
+216 silly audit   optionator: [ '0.9.4' ],
+216 silly audit   'own-keys': [ '1.0.1' ],
+216 silly audit   'p-limit': [ '3.1.0' ],
+216 silly audit   'p-locate': [ '5.0.0' ],
+216 silly audit   'parent-module': [ '1.0.1' ],
+216 silly audit   'path-exists': [ '4.0.0' ],
+216 silly audit   'path-is-absolute': [ '1.0.1' ],
+216 silly audit   'path-key': [ '3.1.1' ],
+216 silly audit   'path-parse': [ '1.0.7' ],
+216 silly audit   picocolors: [ '1.1.1' ],
+216 silly audit   'possible-typed-array-names': [ '1.1.0' ],
+216 silly audit   'postcss-value-parser': [ '4.2.0' ],
+216 silly audit   preact: [ '10.24.3' ],
+216 silly audit   'preact-render-to-string': [ '6.5.11' ],
+216 silly audit   'prelude-ls': [ '1.2.1' ],
+216 silly audit   prisma: [ '5.22.0' ],
+216 silly audit   'prop-types': [ '15.8.1' ],
+216 silly audit   punycode: [ '2.3.1' ],
+216 silly audit   'queue-microtask': [ '1.2.3' ],
+216 silly audit   react: [ '19.2.4' ],
+216 silly audit   'react-dom': [ '19.2.4' ],
+216 silly audit   'react-hook-form': [ '7.71.2' ],
+216 silly audit   'react-is': [ '16.13.1' ],
+216 silly audit   'reflect.getprototypeof': [ '1.0.10' ],
+216 silly audit   'regexp.prototype.flags': [ '1.5.4' ],
+216 silly audit   'resolve-from': [ '4.0.0' ],
+216 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+216 silly audit   reusify: [ '1.1.0' ],
+216 silly audit   rimraf: [ '3.0.2' ],
+216 silly audit   glob: [ '7.2.3' ],
+216 silly audit   'run-parallel': [ '1.2.0' ],
+216 silly audit   'safe-array-concat': [ '1.1.3' ],
+216 silly audit   'safe-push-apply': [ '1.0.0' ],
+216 silly audit   'safe-regex-test': [ '1.1.0' ],
+216 silly audit   scheduler: [ '0.27.0' ],
+216 silly audit   'set-function-length': [ '1.2.2' ],
+216 silly audit   'set-function-name': [ '2.0.2' ],
+216 silly audit   'set-proto': [ '1.0.0' ],
+216 silly audit   sharp: [ '0.34.5' ],
+216 silly audit   'shebang-command': [ '2.0.0' ],
+216 silly audit   'shebang-regex': [ '3.0.0' ],
+216 silly audit   'side-channel': [ '1.1.0' ],
+216 silly audit   'side-channel-list': [ '1.0.0' ],
+216 silly audit   'side-channel-map': [ '1.0.1' ],
+216 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+216 silly audit   'source-map-js': [ '1.2.1' ],
+216 silly audit   'stable-hash': [ '0.0.5' ],
+216 silly audit   'stop-iteration-iterator': [ '1.1.0' ],
+216 silly audit   'string.prototype.includes': [ '2.0.1' ],
+216 silly audit   'string.prototype.matchall': [ '4.0.12' ],
+216 silly audit   'string.prototype.repeat': [ '1.0.0' ],
+216 silly audit   'string.prototype.trim': [ '1.2.10' ],
+216 silly audit   'string.prototype.trimend': [ '1.0.9' ],
+216 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+216 silly audit   'strip-ansi': [ '6.0.1' ],
+216 silly audit   'strip-bom': [ '3.0.0' ],
+216 silly audit   'strip-json-comments': [ '3.1.1' ],
+216 silly audit   'styled-jsx': [ '5.1.6' ],
+216 silly audit   'supports-color': [ '7.2.0' ],
+216 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+216 silly audit   'tailwind-merge': [ '3.5.0' ],
+216 silly audit   tailwindcss: [ '4.2.1' ],
+216 silly audit   'text-table': [ '0.2.0' ],
+216 silly audit   tinyglobby: [ '0.2.15' ],
+216 silly audit   'to-regex-range': [ '5.0.1' ],
+216 silly audit   'ts-api-utils': [ '2.4.0' ],
+216 silly audit   'tsconfig-paths': [ '3.15.0' ],
+216 silly audit   tslib: [ '2.8.1' ],
+216 silly audit   'type-check': [ '0.4.0' ],
+216 silly audit   'type-fest': [ '0.20.2' ],
+216 silly audit   'typed-array-buffer': [ '1.0.3' ],
+216 silly audit   'typed-array-byte-length': [ '1.0.3' ],
+216 silly audit   'typed-array-byte-offset': [ '1.0.4' ],
+216 silly audit   'typed-array-length': [ '1.0.7' ],
+216 silly audit   typescript: [ '5.9.3' ],
+216 silly audit   'unbox-primitive': [ '1.1.0' ],
+216 silly audit   'undici-types': [ '6.21.0' ],
+216 silly audit   'unrs-resolver': [ '1.11.1' ],
+216 silly audit   'update-browserslist-db': [ '1.2.3' ],
+216 silly audit   'uri-js': [ '4.4.1' ],
+216 silly audit   which: [ '2.0.2' ],
+216 silly audit   'which-boxed-primitive': [ '1.1.1' ],
+216 silly audit   'which-builtin-type': [ '1.2.1' ],
+216 silly audit   'which-collection': [ '1.0.2' ],
+216 silly audit   'which-typed-array': [ '1.1.20' ],
+216 silly audit   'word-wrap': [ '1.2.5' ],
+216 silly audit   wrappy: [ '1.0.2' ],
+216 silly audit   'yocto-queue': [ '0.1.0' ],
+216 silly audit   zod: [ '3.25.76' ],
+216 silly audit   '@tailwindcss/postcss': [ '4.2.1' ],
+216 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+216 silly audit   '@tailwindcss/node': [ '4.2.1' ],
+216 silly audit   '@tailwindcss/oxide': [ '4.2.1' ],
+216 silly audit   '@jridgewell/remapping': [ '2.3.5' ],
+216 silly audit   'enhanced-resolve': [ '5.20.0' ],
+216 silly audit   jiti: [ '2.6.1' ],
+216 silly audit   lightningcss: [ '1.31.1' ],
+216 silly audit   'magic-string': [ '0.30.21' ],
+216 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+216 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+216 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+216 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+216 silly audit   '@tailwindcss/oxide-android-arm64': [ '4.2.1' ],
+216 silly audit   '@tailwindcss/oxide-darwin-arm64': [ '4.2.1' ],
+216 silly audit   '@tailwindcss/oxide-darwin-x64': [ '4.2.1' ],
+216 silly audit   '@tailwindcss/oxide-freebsd-x64': [ '4.2.1' ],
+216 silly audit   '@tailwindcss/oxide-linux-arm-gnueabihf': [ '4.2.1' ],
+216 silly audit   '@tailwindcss/oxide-linux-arm64-gnu': [ '4.2.1' ],
+216 silly audit   '@tailwindcss/oxide-linux-arm64-musl': [ '4.2.1' ],
+216 silly audit   '@tailwindcss/oxide-linux-x64-gnu': [ '4.2.1' ],
+216 silly audit   '@tailwindcss/oxide-linux-x64-musl': [ '4.2.1' ],
+216 silly audit   '@tailwindcss/oxide-win32-arm64-msvc': [ '4.2.1' ],
+216 silly audit   '@tailwindcss/oxide-win32-x64-msvc': [ '4.2.1' ],
+216 silly audit   'graceful-fs': [ '4.2.11' ],
+216 silly audit   tapable: [ '2.3.0' ],
+216 silly audit   'lightningcss-android-arm64': [ '1.31.1' ],
+216 silly audit   'lightningcss-darwin-arm64': [ '1.31.1' ],
+216 silly audit   'lightningcss-darwin-x64': [ '1.31.1' ],
+216 silly audit   'lightningcss-freebsd-x64': [ '1.31.1' ],
+216 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.31.1' ],
+216 silly audit   'lightningcss-linux-arm64-gnu': [ '1.31.1' ],
+216 silly audit   'lightningcss-linux-arm64-musl': [ '1.31.1' ],
+216 silly audit   'lightningcss-linux-x64-gnu': [ '1.31.1' ],
+216 silly audit   'lightningcss-linux-x64-musl': [ '1.31.1' ],
+216 silly audit   'lightningcss-win32-arm64-msvc': [ '1.31.1' ],
+216 silly audit   'lightningcss-win32-x64-msvc': [ '1.31.1' ],
+216 silly audit   '@tailwindcss/oxide-wasm32-wasi': [ '4.2.1' ]
+216 silly audit }
+217 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\lightningcss-win32-arm64-msvc
+218 silly reify mark deleted [
+218 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\lightningcss-win32-arm64-msvc'
+218 silly reify ]
+219 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\lightningcss-linux-x64-musl
+220 silly reify mark deleted [
+220 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\lightningcss-linux-x64-musl'
+220 silly reify ]
+221 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\lightningcss-linux-x64-gnu
+222 silly reify mark deleted [
+222 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\lightningcss-linux-x64-gnu'
+222 silly reify ]
+223 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\lightningcss-linux-arm64-musl
+224 silly reify mark deleted [
+224 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\lightningcss-linux-arm64-musl'
+224 silly reify ]
+225 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\lightningcss-linux-arm64-gnu
+226 silly reify mark deleted [
+226 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\lightningcss-linux-arm64-gnu'
+226 silly reify ]
+227 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\lightningcss-linux-arm-gnueabihf
+228 silly reify mark deleted [
+228 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\lightningcss-linux-arm-gnueabihf'
+228 silly reify ]
+229 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\lightningcss-freebsd-x64
+230 silly reify mark deleted [
+230 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\lightningcss-freebsd-x64'
+230 silly reify ]
+231 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\lightningcss-darwin-x64
+232 silly reify mark deleted [
+232 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\lightningcss-darwin-x64'
+232 silly reify ]
+233 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\lightningcss-darwin-arm64
+234 silly reify mark deleted [
+234 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\lightningcss-darwin-arm64'
+234 silly reify ]
+235 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\lightningcss-android-arm64
+236 silly reify mark deleted [
+236 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\lightningcss-android-arm64'
+236 silly reify ]
+237 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@tailwindcss\oxide-win32-arm64-msvc
+238 silly reify mark deleted [
+238 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@tailwindcss\\oxide-win32-arm64-msvc'
+238 silly reify ]
+239 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@tailwindcss\oxide-linux-x64-musl
+240 silly reify mark deleted [
+240 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@tailwindcss\\oxide-linux-x64-musl'
+240 silly reify ]
+241 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@tailwindcss\oxide-linux-x64-gnu
+242 silly reify mark deleted [
+242 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@tailwindcss\\oxide-linux-x64-gnu'
+242 silly reify ]
+243 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@tailwindcss\oxide-linux-arm64-musl
+244 silly reify mark deleted [
+244 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@tailwindcss\\oxide-linux-arm64-musl'
+244 silly reify ]
+245 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@tailwindcss\oxide-linux-arm64-gnu
+246 silly reify mark deleted [
+246 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@tailwindcss\\oxide-linux-arm64-gnu'
+246 silly reify ]
+247 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@tailwindcss\oxide-linux-arm-gnueabihf
+248 silly reify mark deleted [
+248 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@tailwindcss\\oxide-linux-arm-gnueabihf'
+248 silly reify ]
+249 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@tailwindcss\oxide-freebsd-x64
+250 silly reify mark deleted [
+250 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@tailwindcss\\oxide-freebsd-x64'
+250 silly reify ]
+251 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@tailwindcss\oxide-darwin-x64
+252 silly reify mark deleted [
+252 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@tailwindcss\\oxide-darwin-x64'
+252 silly reify ]
+253 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@tailwindcss\oxide-darwin-arm64
+254 silly reify mark deleted [
+254 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@tailwindcss\\oxide-darwin-arm64'
+254 silly reify ]
+255 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@tailwindcss\oxide-android-arm64
+256 silly reify mark deleted [
+256 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@tailwindcss\\oxide-android-arm64'
+256 silly reify ]
+257 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\fsevents
+258 silly reify mark deleted [
+258 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\fsevents'
+258 silly reify ]
+259 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-win32-ia32-msvc
+260 silly reify mark deleted [
+260 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-win32-ia32-msvc'
+260 silly reify ]
+261 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-win32-arm64-msvc
+262 silly reify mark deleted [
+262 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-win32-arm64-msvc'
+262 silly reify ]
+263 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-wasm32-wasi
+264 silly reify mark deleted [
+264 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-wasm32-wasi'
+264 silly reify ]
+265 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-linux-x64-musl
+266 silly reify mark deleted [
+266 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-linux-x64-musl'
+266 silly reify ]
+267 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-linux-x64-gnu
+268 silly reify mark deleted [
+268 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-linux-x64-gnu'
+268 silly reify ]
+269 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-linux-s390x-gnu
+270 silly reify mark deleted [
+270 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-linux-s390x-gnu'
+270 silly reify ]
+271 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-linux-riscv64-musl
+272 silly reify mark deleted [
+272 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-linux-riscv64-musl'
+272 silly reify ]
+273 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-linux-riscv64-gnu
+274 silly reify mark deleted [
+274 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-linux-riscv64-gnu'
+274 silly reify ]
+275 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-linux-ppc64-gnu
+276 silly reify mark deleted [
+276 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-linux-ppc64-gnu'
+276 silly reify ]
+277 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-linux-arm64-musl
+278 silly reify mark deleted [
+278 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-linux-arm64-musl'
+278 silly reify ]
+279 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-linux-arm64-gnu
+280 silly reify mark deleted [
+280 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-linux-arm64-gnu'
+280 silly reify ]
+281 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-linux-arm-musleabihf
+282 silly reify mark deleted [
+282 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-linux-arm-musleabihf'
+282 silly reify ]
+283 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-linux-arm-gnueabihf
+284 silly reify mark deleted [
+284 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-linux-arm-gnueabihf'
+284 silly reify ]
+285 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-freebsd-x64
+286 silly reify mark deleted [
+286 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-freebsd-x64'
+286 silly reify ]
+287 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-darwin-x64
+288 silly reify mark deleted [
+288 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-darwin-x64'
+288 silly reify ]
+289 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-darwin-arm64
+290 silly reify mark deleted [
+290 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-darwin-arm64'
+290 silly reify ]
+291 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-android-arm64
+292 silly reify mark deleted [
+292 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-android-arm64'
+292 silly reify ]
+293 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@unrs\resolver-binding-android-arm-eabi
+294 silly reify mark deleted [
+294 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@unrs\\resolver-binding-android-arm-eabi'
+294 silly reify ]
+295 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@next\swc-win32-arm64-msvc
+296 silly reify mark deleted [
+296 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@next\\swc-win32-arm64-msvc'
+296 silly reify ]
+297 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@next\swc-linux-x64-musl
+298 silly reify mark deleted [
+298 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@next\\swc-linux-x64-musl'
+298 silly reify ]
+299 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@next\swc-linux-x64-gnu
+300 silly reify mark deleted [
+300 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@next\\swc-linux-x64-gnu'
+300 silly reify ]
+301 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@next\swc-linux-arm64-musl
+302 silly reify mark deleted [
+302 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@next\\swc-linux-arm64-musl'
+302 silly reify ]
+303 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@next\swc-linux-arm64-gnu
+304 silly reify mark deleted [
+304 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@next\\swc-linux-arm64-gnu'
+304 silly reify ]
+305 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@next\swc-darwin-x64
+306 silly reify mark deleted [
+306 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@next\\swc-darwin-x64'
+306 silly reify ]
+307 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@next\swc-darwin-arm64
+308 silly reify mark deleted [
+308 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@next\\swc-darwin-arm64'
+308 silly reify ]
+309 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-win32-ia32
+310 silly reify mark deleted [
+310 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-win32-ia32'
+310 silly reify ]
+311 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-win32-arm64
+312 silly reify mark deleted [
+312 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-win32-arm64'
+312 silly reify ]
+313 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-wasm32
+314 silly reify mark deleted [
+314 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-wasm32'
+314 silly reify ]
+315 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-linuxmusl-x64
+316 silly reify mark deleted [
+316 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-linuxmusl-x64'
+316 silly reify ]
+317 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-linuxmusl-arm64
+318 silly reify mark deleted [
+318 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-linuxmusl-arm64'
+318 silly reify ]
+319 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-linux-x64
+320 silly reify mark deleted [
+320 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-linux-x64'
+320 silly reify ]
+321 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-linux-s390x
+322 silly reify mark deleted [
+322 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-linux-s390x'
+322 silly reify ]
+323 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-linux-riscv64
+324 silly reify mark deleted [
+324 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-linux-riscv64'
+324 silly reify ]
+325 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-linux-ppc64
+326 silly reify mark deleted [
+326 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-linux-ppc64'
+326 silly reify ]
+327 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-linux-arm64
+328 silly reify mark deleted [
+328 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-linux-arm64'
+328 silly reify ]
+329 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-linux-arm
+330 silly reify mark deleted [
+330 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-linux-arm'
+330 silly reify ]
+331 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-libvips-linuxmusl-x64
+332 silly reify mark deleted [
+332 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+332 silly reify ]
+333 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-libvips-linuxmusl-arm64
+334 silly reify mark deleted [
+334 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+334 silly reify ]
+335 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-libvips-linux-x64
+336 silly reify mark deleted [
+336 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-libvips-linux-x64'
+336 silly reify ]
+337 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-libvips-linux-s390x
+338 silly reify mark deleted [
+338 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-libvips-linux-s390x'
+338 silly reify ]
+339 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-libvips-linux-riscv64
+340 silly reify mark deleted [
+340 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-libvips-linux-riscv64'
+340 silly reify ]
+341 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-libvips-linux-ppc64
+342 silly reify mark deleted [
+342 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-libvips-linux-ppc64'
+342 silly reify ]
+343 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-libvips-linux-arm64
+344 silly reify mark deleted [
+344 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-libvips-linux-arm64'
+344 silly reify ]
+345 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-libvips-linux-arm
+346 silly reify mark deleted [
+346 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-libvips-linux-arm'
+346 silly reify ]
+347 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-libvips-darwin-x64
+348 silly reify mark deleted [
+348 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-libvips-darwin-x64'
+348 silly reify ]
+349 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-libvips-darwin-arm64
+350 silly reify mark deleted [
+350 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+350 silly reify ]
+351 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-darwin-x64
+352 silly reify mark deleted [
+352 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-darwin-x64'
+352 silly reify ]
+353 verbose reify failed optional dependency D:\projects\delivery_app\Delivery_booking_webapp\node_modules\@img\sharp-darwin-arm64
+354 silly reify mark deleted [
+354 silly reify   'D:\\projects\\delivery_app\\Delivery_booking_webapp\\node_modules\\@img\\sharp-darwin-arm64'
+354 silly reify ]
+355 http cache tapable@https://registry.npmjs.org/tapable/-/tapable-2.3.0.tgz 0ms (cache hit)
+356 http cache lightningcss-win32-x64-msvc@https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.31.1.tgz 0ms (cache hit)
+357 http cache @tailwindcss/oxide-win32-x64-msvc@https://registry.npmjs.org/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.2.1.tgz 0ms (cache hit)
+358 http cache graceful-fs@https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz 0ms (cache hit)
+359 http cache @jridgewell/resolve-uri@https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz 0ms (cache hit)
+360 http cache magic-string@https://registry.npmjs.org/magic-string/-/magic-string-0.30.21.tgz 0ms (cache hit)
+361 http cache @jridgewell/trace-mapping@https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.31.tgz 0ms (cache hit)
+362 http cache @jridgewell/gen-mapping@https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz 0ms (cache hit)
+363 http cache @jridgewell/sourcemap-codec@https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz 0ms (cache hit)
+364 http cache enhanced-resolve@https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.20.0.tgz 0ms (cache hit)
+365 http cache @alloc/quick-lru@https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz 0ms (cache hit)
+366 http cache @jridgewell/remapping@https://registry.npmjs.org/@jridgewell/remapping/-/remapping-2.3.5.tgz 0ms (cache hit)
+367 http cache lightningcss@https://registry.npmjs.org/lightningcss/-/lightningcss-1.31.1.tgz 0ms (cache hit)
+368 http cache jiti@https://registry.npmjs.org/jiti/-/jiti-2.6.1.tgz 0ms (cache hit)
+369 http cache @tailwindcss/oxide@https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.2.1.tgz 0ms (cache hit)
+370 http cache @tybys/wasm-util@https://registry.npmjs.org/@tybys/wasm-util/-/wasm-util-0.10.1.tgz 1ms (cache hit)
+371 http cache @tailwindcss/postcss@https://registry.npmjs.org/@tailwindcss/postcss/-/postcss-4.2.1.tgz 0ms (cache hit)
+372 http cache @tailwindcss/node@https://registry.npmjs.org/@tailwindcss/node/-/node-4.2.1.tgz 0ms (cache hit)
+373 http cache @napi-rs/wasm-runtime@https://registry.npmjs.org/@napi-rs/wasm-runtime/-/wasm-runtime-0.2.12.tgz 0ms (cache hit)
+374 http cache @emnapi/wasi-threads@https://registry.npmjs.org/@emnapi/wasi-threads/-/wasi-threads-1.1.0.tgz 0ms (cache hit)
+375 http cache @emnapi/core@https://registry.npmjs.org/@emnapi/core/-/core-1.8.1.tgz 0ms (cache hit)
+376 silly tarball no local data for tapable@https://registry.npmjs.org/tapable/-/tapable-2.3.0.tgz. Extracting by manifest.
+377 silly tarball no local data for lightningcss-win32-x64-msvc@https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.31.1.tgz. Extracting by manifest.
+378 silly tarball no local data for @tailwindcss/oxide-win32-x64-msvc@https://registry.npmjs.org/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.2.1.tgz. Extracting by manifest.
+379 silly tarball no local data for graceful-fs@https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz. Extracting by manifest.
+380 silly tarball no local data for @jridgewell/resolve-uri@https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz. Extracting by manifest.
+381 silly tarball no local data for magic-string@https://registry.npmjs.org/magic-string/-/magic-string-0.30.21.tgz. Extracting by manifest.
+382 silly tarball no local data for @jridgewell/trace-mapping@https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.31.tgz. Extracting by manifest.
+383 silly tarball no local data for @jridgewell/gen-mapping@https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz. Extracting by manifest.
+384 silly tarball no local data for @jridgewell/sourcemap-codec@https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz. Extracting by manifest.
+385 silly tarball no local data for enhanced-resolve@https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.20.0.tgz. Extracting by manifest.
+386 silly tarball no local data for @alloc/quick-lru@https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz. Extracting by manifest.
+387 silly tarball no local data for @jridgewell/remapping@https://registry.npmjs.org/@jridgewell/remapping/-/remapping-2.3.5.tgz. Extracting by manifest.
+388 silly tarball no local data for lightningcss@https://registry.npmjs.org/lightningcss/-/lightningcss-1.31.1.tgz. Extracting by manifest.
+389 silly tarball no local data for jiti@https://registry.npmjs.org/jiti/-/jiti-2.6.1.tgz. Extracting by manifest.
+390 silly tarball no local data for @tailwindcss/oxide@https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.2.1.tgz. Extracting by manifest.
+391 silly tarball no local data for @tailwindcss/postcss@https://registry.npmjs.org/@tailwindcss/postcss/-/postcss-4.2.1.tgz. Extracting by manifest.
+392 silly tarball no local data for @tailwindcss/node@https://registry.npmjs.org/@tailwindcss/node/-/node-4.2.1.tgz. Extracting by manifest.
+393 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 251ms
+394 silly audit report {}
+395 http fetch GET 200 https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz 295ms (cache miss)
+396 http fetch GET 200 https://registry.npmjs.org/tapable/-/tapable-2.3.0.tgz 353ms (cache miss)
+397 http fetch GET 200 https://registry.npmjs.org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz 357ms (cache miss)
+398 http fetch GET 200 https://registry.npmjs.org/@tailwindcss/oxide/-/oxide-4.2.1.tgz 353ms (cache miss)
+399 http fetch GET 200 https://registry.npmjs.org/@tailwindcss/postcss/-/postcss-4.2.1.tgz 605ms (cache miss)
+400 http fetch GET 200 https://registry.npmjs.org/@alloc/quick-lru/-/quick-lru-5.2.0.tgz 657ms (cache miss)
+401 http fetch GET 200 https://registry.npmjs.org/@tailwindcss/node/-/node-4.2.1.tgz 685ms (cache miss)
+402 http fetch GET 200 https://registry.npmjs.org/magic-string/-/magic-string-0.30.21.tgz 742ms (cache miss)
+403 http fetch GET 200 https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.5.tgz 911ms (cache miss)
+404 http fetch GET 200 https://registry.npmjs.org/@jridgewell/remapping/-/remapping-2.3.5.tgz 1000ms (cache miss)
+405 http fetch GET 200 https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz 1017ms (cache miss)
+406 http fetch GET 200 https://registry.npmjs.org/lightningcss/-/lightningcss-1.31.1.tgz 1098ms (cache miss)
+407 http fetch GET 200 https://registry.npmjs.org/jiti/-/jiti-2.6.1.tgz 1146ms (cache miss)
+408 http fetch GET 200 https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.31.tgz 1152ms (cache miss)
+409 http fetch GET 200 https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.20.0.tgz 1199ms (cache miss)
+410 http fetch GET 200 https://registry.npmjs.org/lightningcss-win32-x64-msvc/-/lightningcss-win32-x64-msvc-1.31.1.tgz 1283ms (cache miss)
+411 http fetch GET 200 https://registry.npmjs.org/@tailwindcss/oxide-win32-x64-msvc/-/oxide-win32-x64-msvc-4.2.1.tgz 1382ms (cache miss)
+412 silly ADD node_modules/lightningcss-win32-x64-msvc
+413 silly ADD
+414 silly ADD
+415 silly ADD
+416 silly ADD
+417 silly ADD
+418 silly ADD
+419 silly ADD
+420 silly ADD
+421 silly ADD
+422 silly ADD
+423 silly ADD node_modules/tapable
+424 silly ADD node_modules/graceful-fs
+425 silly ADD node_modules/@tailwindcss/oxide-win32-x64-msvc
+426 silly ADD
+427 silly ADD
+428 silly ADD
+429 silly ADD
+430 silly ADD
+431 silly ADD
+432 silly ADD
+433 silly ADD
+434 silly ADD
+435 silly ADD
+436 silly ADD
+437 silly ADD node_modules/@jridgewell/resolve-uri
+438 silly ADD node_modules/@jridgewell/sourcemap-codec
+439 silly ADD node_modules/@jridgewell/trace-mapping
+440 silly ADD node_modules/@jridgewell/gen-mapping
+441 silly ADD node_modules/magic-string
+442 silly ADD node_modules/lightningcss
+443 silly ADD node_modules/jiti
+444 silly ADD node_modules/enhanced-resolve
+445 silly ADD node_modules/@jridgewell/remapping
+446 silly ADD node_modules/@tailwindcss/oxide
+447 silly ADD node_modules/@tailwindcss/node
+448 silly ADD node_modules/@alloc/quick-lru
+449 silly ADD node_modules/@tailwindcss/postcss
+450 silly ADD
+451 silly ADD
+452 silly ADD
+453 silly ADD
+454 silly ADD
+455 silly ADD
+456 silly ADD
+457 silly ADD
+458 silly ADD
+459 silly ADD
+460 silly ADD
+461 silly ADD
+462 silly ADD
+463 silly ADD
+464 silly ADD
+465 silly ADD
+466 silly ADD
+467 silly ADD
+468 silly ADD
+469 silly ADD node_modules/@tybys/wasm-util
+470 silly ADD
+471 silly ADD
+472 silly ADD
+473 silly ADD
+474 silly ADD
+475 silly ADD
+476 silly ADD
+477 silly ADD node_modules/@napi-rs/wasm-runtime
+478 silly ADD
+479 silly ADD
+480 silly ADD
+481 silly ADD
+482 silly ADD
+483 silly ADD
+484 silly ADD
+485 silly ADD
+486 silly ADD
+487 silly ADD
+488 silly ADD
+489 silly ADD
+490 silly ADD
+491 silly ADD
+492 silly ADD
+493 silly ADD
+494 silly ADD
+495 silly ADD
+496 silly ADD
+497 silly ADD
+498 silly ADD
+499 silly ADD
+500 silly ADD
+501 silly ADD node_modules/@emnapi/wasi-threads
+502 silly ADD node_modules/@emnapi/core
+503 verbose cwd D:\projects\delivery_app\Delivery_booking_webapp
+504 verbose os Windows_NT 10.0.19045
+505 verbose node v22.16.0
+506 verbose npm  v10.9.2
+507 verbose exit 0
+508 info ok

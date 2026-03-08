@@ -1,18 +1,20 @@
-:root { font-family: Inter, system-ui, sans-serif; }
-body { margin: 0; background: #fafafa; color: #111; }
-main { max-width: 960px; margin: 0 auto; padding: 24px; }
-a { color: #2563eb; text-decoration: none; }
-.card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; margin-bottom: 16px; }
-.grid { display: grid; gap: 12px; }
-input, select, textarea, button { padding: 8px; border-radius: 8px; border: 1px solid #d1d5db; }
-button { background: #111827; color: #fff; cursor: pointer; }
-.small { color: #6b7280; font-size: 12px; }
-.error { color: #b91c1c; }
-.success { color: #166534; }
-.booking-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; align-items: start; }
-.route-panel { border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; background: #f8fafc; }
-.route-map { height: 320px; border: 1px solid #d1d5db; border-radius: 10px; margin-bottom: 10px; background: #eef2ff; }
-@media (max-width: 900px) {
-  .booking-layout { grid-template-columns: 1fr; }
-  .route-map { height: 260px; }
+@import "tailwindcss";
+@source "../**/*.{js,jsx,ts,tsx,mdx}";
+
+@layer base {
+  html,
+  body {
+    @apply min-h-full;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+    background-image:
+      radial-gradient(circle at 90% -15%, rgba(186, 230, 253, 0.5) 0%, transparent 35%),
+      radial-gradient(circle at 10% 120%, rgba(254, 240, 138, 0.34) 0%, transparent 30%);
+  }
+
+  a {
+    @apply text-blue-700 underline-offset-2 hover:underline;
+  }
 }

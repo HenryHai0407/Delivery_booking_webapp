@@ -2,13 +2,14 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { requireRole } from "@/lib/auth";
 
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
+    const { id } = await params;
     await requireRole("admin");
     const limit = Math.min(Number(req.nextUrl.searchParams.get("limit") || "30"), 100);
 
     const events = await prisma.bookingEvent.findMany({
-      where: { bookingId: params.id },
+      where: { bookingId: id },
       orderBy: { createdAt: "desc" },
       take: Number.isFinite(limit) ? limit : 30,
       select: {

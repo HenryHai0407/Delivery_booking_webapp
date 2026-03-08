@@ -20,14 +20,23 @@ function subjectFor(kind: NotificationKind, publicId: string) {
   return `Booking completed: ${publicId}`;
 }
 
-function bodyFor(kind: NotificationKind, trackingUrl: string) {
+function bodyFor(
+  kind: NotificationKind,
+  trackingUrl: string,
+  details?: { pickupText?: string; dropoffText?: string; requestedWindowStart?: Date | null }
+) {
+  const routeLine =
+    details?.pickupText && details?.dropoffText ? `Route: ${details.pickupText} -> ${details.dropoffText}\n` : "";
+  const startLine = details?.requestedWindowStart
+    ? `Requested start: ${details.requestedWindowStart.toLocaleString()}\n`
+    : "";
   if (kind === "booking_received") {
-    return `Your booking request was received. Track updates: ${trackingUrl}`;
+    return `Your booking request was received.\n${startLine}${routeLine}Track updates: ${trackingUrl}`;
   }
   if (kind === "booking_confirmed") {
-    return `Your booking is confirmed. Track updates: ${trackingUrl}`;
+    return `Your booking is confirmed.\n${startLine}${routeLine}Track updates: ${trackingUrl}`;
   }
-  return `Your delivery is completed. View details: ${trackingUrl}`;
+  return `Your delivery is completed.\n${routeLine}View details: ${trackingUrl}`;
 }
 
 async function sendViaSendGrid(to: string, subject: string, text: string) {
@@ -81,9 +90,13 @@ export async function notifyBooking(input: NotificationInput) {
     return;
   }
 
+  const details = await prisma.booking.findUnique({
+    where: { id: input.bookingId },
+    select: { pickupText: true, dropoffText: true, requestedWindowStart: true }
+  });
   const trackingUrl = `${input.baseUrl}/portal/${input.publicId}?token=${input.token}`;
   const subject = subjectFor(input.kind, input.publicId);
-  const text = bodyFor(input.kind, trackingUrl);
+  const text = bodyFor(input.kind, trackingUrl, details || undefined);
   let result: { attempted: boolean; sent: boolean; provider: string; reason?: string; messageId?: string; error?: string } = {
     attempted: false,
     sent: false,

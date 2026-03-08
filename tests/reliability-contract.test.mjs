@@ -4,6 +4,8 @@ import fs from "node:fs";
 
 const notifications = fs.readFileSync("src/lib/notifications.ts", "utf8");
 const podRoute = fs.readFileSync("src/app/api/driver/jobs/[id]/pod/route.ts", "utf8");
+const driverStatusRoute = fs.readFileSync("src/app/api/driver/jobs/[id]/status/route.ts", "utf8");
+const adminStatusRoute = fs.readFileSync("src/app/api/admin/bookings/[id]/status/route.ts", "utf8");
 
 test("notifications handle provider exceptions without throwing", () => {
   assert.equal(notifications.includes("try {"), true);
@@ -16,3 +18,7 @@ test("pod endpoint deduplicates retry uploads by objectKey", () => {
   assert.equal(podRoute.includes("deduplicated: true"), true);
 });
 
+test("status endpoints enforce pod before completion", () => {
+  assert.equal(driverStatusRoute.includes("Upload POD photo first"), true);
+  assert.equal(adminStatusRoute.includes("POD photo is required before marking booking as completed"), true);
+});

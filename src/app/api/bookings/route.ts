@@ -42,6 +42,37 @@ export async function POST(req: NextRequest) {
           payloadJson: JSON.stringify({ to: "requested", correlationId: cid })
         }
       });
+      if (parsed.estimateLowEur != null && parsed.estimateHighEur != null) {
+        await prisma.bookingEvent.create({
+          data: {
+            bookingId: booking.id,
+            eventType: "note_added",
+            payloadJson: JSON.stringify({
+              kind: "customer_estimate",
+              currency: "EUR",
+              low: parsed.estimateLowEur,
+              high: parsed.estimateHighEur,
+              billedHours: parsed.estimateBilledHours,
+              distanceKm: parsed.estimateDistanceKm,
+              etaMinutes: parsed.estimateEtaMinutes,
+              trafficEtaMinutes: parsed.estimateTrafficEtaMinutes,
+              trafficLevel: parsed.estimateTrafficLevel,
+              provider: parsed.estimateProvider,
+              estimatedAt: parsed.estimateUpdatedAt
+            })
+          }
+        });
+      }
+      await prisma.bookingEvent.create({
+        data: {
+          bookingId: booking.id,
+          eventType: "note_added",
+          payloadJson: JSON.stringify({
+            kind: "customer_requirements",
+            staffRequired: parsed.staffRequired
+          })
+        }
+      });
       await notifyBooking({
         kind: "booking_received",
         bookingId: booking.id,

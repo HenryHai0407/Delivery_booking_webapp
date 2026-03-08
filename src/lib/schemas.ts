@@ -18,8 +18,18 @@ export const createBookingSchema = z.object({
   dropoffText: addressSchema,
   requestedWindowStart: isoDateTimeWithOffset,
   requestedWindowEnd: isoDateTimeWithOffset,
+  staffRequired: z.coerce.number().int().min(1).max(8),
   notes: z.string().trim().max(1000).optional(),
-  idempotencyKey: z.string().min(8).optional()
+  idempotencyKey: z.string().min(8).optional(),
+  estimateLowEur: z.coerce.number().int().nonnegative().optional(),
+  estimateHighEur: z.coerce.number().int().nonnegative().optional(),
+  estimateBilledHours: z.coerce.number().positive().optional(),
+  estimateDistanceKm: z.coerce.number().positive().optional(),
+  estimateEtaMinutes: z.coerce.number().int().positive().optional(),
+  estimateTrafficEtaMinutes: z.coerce.number().int().positive().optional(),
+  estimateTrafficLevel: z.enum(["free", "moderate", "busy", "heavy", "unknown"]).optional(),
+  estimateProvider: z.enum(["google", "osm"]).optional(),
+  estimateUpdatedAt: isoDateTimeWithOffset.optional()
 }).superRefine((value, ctx) => {
   const start = new Date(value.requestedWindowStart);
   const end = new Date(value.requestedWindowEnd);
@@ -36,6 +46,22 @@ export const createBookingSchema = z.object({
       path: ["dropoffText"],
       message: "Dropoff must be different from pickup"
     });
+  }
+  const hasEstimate = value.estimateLowEur != null || value.estimateHighEur != null;
+  if (hasEstimate) {
+    if (value.estimateLowEur == null || value.estimateHighEur == null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["estimateLowEur"],
+        message: "estimateLowEur and estimateHighEur must both be provided"
+      });
+    } else if (value.estimateHighEur < value.estimateLowEur) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ["estimateHighEur"],
+        message: "estimateHighEur must be >= estimateLowEur"
+      });
+    }
   }
 });
 

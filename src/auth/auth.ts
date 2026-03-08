@@ -4,6 +4,10 @@ import { prisma } from "@/lib/db";
 import type { Role } from "@/lib/types";
 
 const auth = NextAuth({
+  secret: process.env.NEXTAUTH_SECRET,
+  pages: {
+    signIn: "/login"
+  },
   providers: [
     Credentials({
       name: "Credentials",
